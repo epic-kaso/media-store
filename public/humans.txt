@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Akachukwu Okafor -- FrontEnd/BackEnd Programmer -- @kasoprecede
+    Nriagu Chidubem -- Project Manager
+
+# THANKS
+
+    Akachukwu
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr

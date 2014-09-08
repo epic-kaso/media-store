@@ -1,0 +1,33 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.alert{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.simple_error{
+    color: darkred;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
