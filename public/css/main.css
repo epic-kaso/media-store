@@ -39,8 +39,9 @@ body{
     z-index: 100;
     opacity: 0;
     background-color: rgba(255,255,255,.5);
-    color: #c0392b;
+    color: #d35400;
     text-align: center;
+    text-shadow: 0 0 5px rgba(0,0,0,0.6);
     vertical-align: middle;
     font-size: 3em;
     transition: all .3s;
@@ -63,7 +64,7 @@ body{
     -moz-transform: all .3s;
 }
 .media-item .overlay .play-media > span:hover {
-    color: #e74c3c;
+    color: #e67e22;
 }
 .media-item:hover,.media-item:focus{
     box-shadow: 0px 15px 30px -10px rgba(0,0,0,.5);
