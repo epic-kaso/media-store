@@ -149,139 +149,18 @@
                  <span class="fa fa-star" style="color: #8b0000"></span><span> FEATURED</span>
                </div>
                <div class="row">
-                     <div class="col-sm-2 media-item">
-                         <img class="img-responsive" src="img/cover.jpg" />
-                         <div class="meta-info">
-                             <ul>
-                                 <li><h4>Title</h4></li>
-                                 <li><p>Release date</p></li>
-                                 <li><p>Tracks</p></li>
-                             </ul>
-                         </div>
-                     </div>
-
-                     <div class="col-sm-2 media-item">
-                         <img class="img-responsive" src="img/cover.jpg" />
-                         <div class="meta-info">
-                             <ul>
-                                 <li><h4>Title</h4></li>
-                                 <li><p>Release date</p></li>
-                                 <li><p>Tracks</p></li>
-                             </ul>
-                         </div>
-                     </div>
-                     <div class="col-sm-2 media-item">
-                         <img class="img-responsive" src="img/cover.jpg" />
-                         <div class="meta-info">
-                             <ul>
-                                 <li><h4>Title</h4></li>
-                                 <li><p>Release date</p></li>
-                                 <li><p>Tracks</p></li>
-                             </ul>
-                         </div>
-                     </div>
-                     <div class="col-sm-2 media-item">
-                         <img class="img-responsive" src="img/cover.jpg" />
-                         <div class="meta-info">
-                             <ul>
-                                 <li><h4>Title</h4></li>
-                                 <li><p>Release date</p></li>
-                                 <li><p>Tracks</p></li>
-                             </ul>
-                         </div>
-                     </div>
-
-
+                     @for($i = 0; $i < 5; $i++)
+                      @include('pages.partials.media-item')
+                     @endfor
                </div>
 
               <div class="media-item divider-right">
                       <span><span class="fa fa-bookmark" style="color: #daa520"></span> POPULAR</span>
                     </div>
                     <div class="row">
-                    <div class="col-sm-2 media-item">
-                                        <img class="img-responsive" src="img/cover.jpg" />
-                                        <div class="meta-info">
-                                            <ul>
-                                                <li><h4>Title</h4></li>
-                                                <li><p>Release date</p></li>
-                                                <li><p>Tracks</p></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-2 media-item">
-                                        <img class="img-responsive" src="img/cover.jpg" />
-                                        <div class="meta-info">
-                                            <ul>
-                                                <li><h4>Title</h4></li>
-                                                <li><p>Release date</p></li>
-                                                <li><p>Tracks</p></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 media-item">
-                                        <img class="img-responsive" src="img/cover.jpg" />
-                                        <div class="meta-info">
-                                            <ul>
-                                                <li><h4>Title</h4></li>
-                                                <li><p>Release date</p></li>
-                                                <li><p>Tracks</p></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 media-item">
-                                        <img class="img-responsive" src="img/cover.jpg" />
-                                        <div class="meta-info">
-                                            <ul>
-                                                <li><h4>Title</h4></li>
-                                                <li><p>Release date</p></li>
-                                                <li><p>Tracks</p></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 media-item">
-                                        <img class="img-responsive" src="img/cover.jpg" />
-                                        <div class="meta-info">
-                                            <ul>
-                                                <li><h4>Title</h4></li>
-                                                <li><p>Release date</p></li>
-                                                <li><p>Tracks</p></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                          <div class="col-sm-2 media-item">
-                              <img class="img-responsive" src="img/cover.jpg" />
-                              <div class="meta-info">
-                                  <ul>
-                                      <li><h4>Title</h4></li>
-                                      <li><p>Release date</p></li>
-                                      <li><p>Tracks</p></li>
-                                  </ul>
-                              </div>
-                          </div>
-
-                          <div class="col-sm-2 media-item">
-                              <img class="img-responsive" src="img/cover.jpg" />
-                              <div class="meta-info">
-                                  <ul>
-                                      <li><h4>Title</h4></li>
-                                      <li><p>Release date</p></li>
-                                      <li><p>Tracks</p></li>
-                                  </ul>
-                              </div>
-                          </div>
-                          <div class="col-sm-2 media-item">
-                              <img class="img-responsive" src="img/cover.jpg" />
-                              <div class="meta-info">
-                                  <ul>
-                                      <li><h4>Title</h4></li>
-                                      <li><p>Release date</p></li>
-                                      <li><p>Tracks</p></li>
-                                  </ul>
-                              </div>
-                          </div>
-
-
+                    @for($i = 0; $i < 8; $i++)
+                         @include('pages.partials.media-item')
+                     @endfor
                     </div>
 
 
@@ -289,144 +168,35 @@
                      <span class="fa fa-flag" style="color: #006400"></span><span> RECENT RELEASE</span>
                    </div>
                    <div class="row">
-                         <div class="col-sm-2 media-item">
-                             <img class="img-responsive" src="img/cover.jpg" />
-                             <div class="meta-info">
-                                 <ul>
-                                     <li><h4>Title</h4></li>
-                                     <li><p>Release date</p></li>
-                                     <li><p>Tracks</p></li>
-                                 </ul>
-                             </div>
-                         </div>
-
-                         <div class="col-sm-2 media-item">
-                             <img class="img-responsive" src="img/cover.jpg" />
-                             <div class="meta-info">
-                                 <ul>
-                                     <li><h4>Title</h4></li>
-                                     <li><p>Release date</p></li>
-                                     <li><p>Tracks</p></li>
-                                 </ul>
-                             </div>
-                         </div>
-                         <div class="col-sm-2 media-item">
-                             <img class="img-responsive" src="img/cover.jpg" />
-                             <div class="meta-info">
-                                 <ul>
-                                     <li><h4>Title</h4></li>
-                                     <li><p>Release date</p></li>
-                                     <li><p>Tracks</p></li>
-                                 </ul>
-                             </div>
-                         </div>
-
-                         <div class="col-sm-2 media-item">
-                                             <img class="img-responsive" src="img/cover.jpg" />
-                                             <div class="meta-info">
-                                                 <ul>
-                                                     <li><h4>Title</h4></li>
-                                                     <li><p>Release date</p></li>
-                                                     <li><p>Tracks</p></li>
-                                                 </ul>
-                                             </div>
-                                         </div>
-
-                                         <div class="col-sm-2 media-item">
-                                             <img class="img-responsive" src="img/cover.jpg" />
-                                             <div class="meta-info">
-                                                 <ul>
-                                                     <li><h4>Title</h4></li>
-                                                     <li><p>Release date</p></li>
-                                                     <li><p>Tracks</p></li>
-                                                 </ul>
-                                             </div>
-                                         </div>
-                                         <div class="col-sm-2 media-item">
-                                             <img class="img-responsive" src="img/cover.jpg" />
-                                             <div class="meta-info">
-                                                 <ul>
-                                                     <li><h4>Title</h4></li>
-                                                     <li><p>Release date</p></li>
-                                                     <li><p>Tracks</p></li>
-                                                 </ul>
-                                             </div>
-                                         </div>
-                                         <div class="col-sm-2 media-item">
-                                             <img class="img-responsive" src="img/cover.jpg" />
-                                             <div class="meta-info">
-                                                 <ul>
-                                                     <li><h4>Title</h4></li>
-                                                     <li><p>Release date</p></li>
-                                                     <li><p>Tracks</p></li>
-                                                 </ul>
-                                             </div>
-                                         </div>
-                                         <div class="col-sm-2 media-item">
-                                             <img class="img-responsive" src="img/cover.jpg" />
-                                             <div class="meta-info">
-                                                 <ul>
-                                                     <li><h4>Title</h4></li>
-                                                     <li><p>Release date</p></li>
-                                                     <li><p>Tracks</p></li>
-                                                 </ul>
-                                             </div>
-                                         </div>
-
+                         @for($i = 0; $i < 7; $i++)
+                            @include('pages.partials.media-item')
+                         @endfor
                    </div>
       </div>
       <div class="col-sm-2">
         <div class="small-divider"><span>Top 10</span></div>
         <div class="row">
-             <div class="media-item">
-                 <img class="img-responsive" src="img/cover.jpg" />
-                 <div class="meta-info">
-                     <ul>
-                         <li><h4>Title</h4></li>
-                     </ul>
-                 </div>
-             </div>
-             <div class="media-item">
-                  <img class="img-responsive" src="img/cover.jpg" />
-                  <div class="meta-info">
-                      <ul>
-                          <li><h4>Title</h4></li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="media-item">
-                <img class="img-responsive" src="img/cover.jpg" />
-                <div class="meta-info">
-                <ul>
-                <li><h4>Title</h4></li>
-                </ul>
-                </div>
-                </div>
-                <div class="media-item">
-                <img class="img-responsive" src="img/cover.jpg" />
-                <div class="meta-info">
-                <ul>
-                <li><h4>Title</h4></li>
-                </ul>
-                </div>
-                </div>
-                <div class="media-item">
-                 <img class="img-responsive" src="img/cover.jpg" />
-                 <div class="meta-info">
-                     <ul>
-                         <li><h4>Title</h4></li>
-                     </ul>
-                 </div>
-                </div>
 
+            @for($i = 0; $i < 7; $i++)
+                @include('pages.partials.sidebar-media-item')
+            @endfor
         </div>
       </div>
 
     <div class="row">
       <hr>
-        <footer>
-                <p>&copy; Company 2014</p>
-              </footer>
+              <div class="col-sm-8 col-sm-offset-2">
+                    <div class="social-btn-container">
+                        <a target="blank" href="http://www.facebook.com/" class="social-btn"><span class="fa fa-facebook"></span></a>
+                        <a target="blank" href="http://twitter.com/" class="social-btn"><span class="fa fa-twitter"></span></a>
+                        <a target="blank" href="http://www.youtube.com/user/" class="social-btn"><span class="fa fa-youtube"></span></a>
+                          <a target="blank" href="http://www.instagram.com/" class="social-btn"><span class="fa fa-instagram"></span></a>
+                          <a target="blank" href="https://plus.google.com" class="social-btn"><span class="fa fa-google-plus"></span></a>
+                    </div>
+                    <div class="footer-note" style="text-align: center">
+                    <p>LandarStudio COPYRIGHT 2014. ALL RIGHTS RESERVED. <br class="visible-phone"> <a href="/terms-and-conditions">TERMS AND CONDITIONS</a></p>
+                    </div>
+                </div>
       </div>
 
     </div>

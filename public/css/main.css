@@ -17,6 +17,7 @@ body{
 }
 
 .media-item {
+    position: relative;
     border: rgba(0,0,0,.2) thin solid;
     padding: 0;
     margin-left: 15px;
@@ -29,6 +30,41 @@ body{
 
 }
 
+.media-item .overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    opacity: 0;
+    background-color: rgba(255,255,255,.5);
+    color: #c0392b;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 3em;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transform: all .3s;
+}
+
+.media-item:hover .overlay{
+    opacity: 1;
+}
+.media-item .overlay .play-media {
+    margin-top: 20%;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transform: all .3s;
+}
+.media-item .overlay .play-media > span{
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transform: all .3s;
+}
+.media-item .overlay .play-media > span:hover {
+    color: #e74c3c;
+}
 .media-item:hover,.media-item:focus{
     box-shadow: 0px 15px 30px -10px rgba(0,0,0,.5);
 }
@@ -133,3 +169,34 @@ img#jp_poster_0{
 .carousel-caption .media-item{
     box-shadow: 0px 15px 30px -10px rgba(0,0,0,.5);
 }
+
+
+.social-btn {
+    width: 100px;
+    /* height: 100px; */
+    margin: 10px;
+    font-size: 3em;
+    text-align: center;
+    vertical-align: middle;
+    -ms-background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.social-btn:hover {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #d35400;
+}
+
+
