@@ -16,12 +16,12 @@ Route::get('/', function()
 	return View::make('pages.index');
 });
 
-Route::group(array('domain' => '{account}.'.$_SERVER['HTTP_HOST']), function()
+Route::group(array('domain' => '{account}.landarstudio.co'), function()
 {
 	Route::get('/',function($account){
 		echo 'Welcome '.$account;
 	});
-	
+
     Route::get('user/{id}', function($account, $id)
     {
         //
