@@ -3,12 +3,11 @@
 
 # TEAM
 
-    Akachukwu Okafor -- FrontEnd/BackEnd Programmer -- @kasoprecede
-    Nriagu Chidubem -- Project Manager
+    <name> -- <role> -- <twitter>
 
 # THANKS
 
-    Akachukwu
+    <name>
 
 # TECHNOLOGY COLOPHON
 
