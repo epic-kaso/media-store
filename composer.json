@@ -10,7 +10,6 @@
         "laracasts/commander": "~1.0",
         "laracasts/validation": "~1.0",
         "laracasts/flash": "*",
-        "laracasts/utilities": "dev-master"
 	},	
     "require-dev": {
         "way/generators": "2.*",
