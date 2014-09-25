@@ -88,7 +88,7 @@
                 <div class="item active">
                   <div class="container">
                       <div class="carousel-caption">
-                        <div class="col-sm-4 media-item ">
+                        <div class="col-sm-4">
                              <img class="img-responsive" src="img/cover.jpg" />
                          </div>
                          <div class="col-sm-7">
@@ -106,7 +106,7 @@
                 <div class="item">
                   <div class="container">
                         <div class="carousel-caption">
-                          <div class="col-sm-4 media-item ">
+                          <div class="col-sm-4">
                                <img class="img-responsive" src="img/cover.jpg" />
                            </div>
                            <div class="col-sm-7">
@@ -124,7 +124,7 @@
                 <div class="item">
                  <div class="container">
                    <div class="carousel-caption">
-                     <div class="col-sm-4 media-item ">
+                     <div class="col-sm-4 ">
                           <img class="img-responsive" src="img/cover.jpg" />
                       </div>
                       <div class="col-sm-7">
