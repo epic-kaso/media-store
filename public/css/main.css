@@ -30,6 +30,15 @@ body{
 
 }
 
+@media (max-width: 360px) {
+    .media-item {
+        margin-left: 10px;
+        margin-right: 0;
+        margin-top: 5px;
+        padding: 0px;
+    }
+}
+
 .media-item .overlay{
     position: absolute;
     top: 0;
@@ -38,10 +47,10 @@ body{
     width: 100%;
     z-index: 100;
     opacity: 0;
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255,255,255,.7);
     color: #d35400;
     text-align: center;
-    text-shadow: 0 0 5px rgba(0,0,0,0.6);
+    text-shadow: 0 0 4px rgba(0,0,0,0.5);
     vertical-align: middle;
     font-size: 3em;
     transition: all .3s;
@@ -70,6 +79,16 @@ body{
     box-shadow: 0px 15px 30px -10px rgba(0,0,0,.5);
 }
 
+
+.divider-row{
+    margin-top: 60px;
+}
+
+@media (max-width: 360px) {
+    .divider-row{
+        margin-top: 30px;
+    }
+}
 .divider-left{
     width: 50%;
     background-color: #f2f2f2;
@@ -77,7 +96,6 @@ body{
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
-    margin-top: 60px;
     margin-left: 0px;
     border: rgba(0,0,0,.2) thin solid;
 }
@@ -89,7 +107,6 @@ body{
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 10px;
-    margin-top: 60px;
     margin-right: 0px;
     border: rgba(0,0,0,.2) thin solid;
     float: right;
@@ -146,6 +163,11 @@ img#jp_poster_0{
     padding-left: 10px;
 }
 
+@media (max-width: 360px) {
+    .carousel {
+        display: none;
+    }
+}
 /* Carousel base class */
 .carousel {
     height: 350px;

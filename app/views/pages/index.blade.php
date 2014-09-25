@@ -146,11 +146,11 @@
 
       <div class="col-sm-10">
 
-         <div class="row">
-            <div class="divider-left col-sm-6">
+         <div class="row divider-row">
+            <div class="divider-left col-xs-6">
                  <span class="fa fa-star" style="color: #8b0000"></span><span> FEATURED</span>
             </div>
-          <div class="col-sm-5" style="margin-top: 60px;"><a href="#" class="btn btn-default btn-sm pull-right">SEE ALL</a></div>
+          <div class="col-xs-5"><a href="#" class="btn btn-default btn-sm pull-right">SEE ALL</a></div>
          </div>
 
                <div class="row">
@@ -159,11 +159,11 @@
                      @endfor
                </div>
 
-                <div class="row">
-                 <div class="col-sm-6" style="margin-top: 60px;">
+                <div class="row divider-row">
+                 <div class="col-xs-6">
                     <a href="#" class="btn btn-default btn-sm pull-left">SEE ALL</a>
                  </div>
-                  <div class="divider-right col-sm-5">
+                  <div class="divider-right col-xs-5">
                      <span><span class="fa fa-bookmark" style="color: #daa520"></span> POPULAR</span>
                 </div>
 
@@ -177,11 +177,11 @@
 
 
 
-                   <div class="row">
-                       <div class="divider-left col-sm-6">
+                   <div class="row divider-row">
+                       <div class="divider-left col-xs-6">
                         <span class="fa fa-flag" style="color: #006400"></span><span> RECENT RELEASE</span>
                       </div>
-                     <div class="col-sm-5" style="margin-top: 60px;"><a href="#" class="btn btn-default btn-sm pull-right">SEE ALL</a></div>
+                     <div class="col-xs-5"><a href="#" class="btn btn-default btn-sm pull-right">SEE ALL</a></div>
                    </div>
                    <div class="row">
                          @for($i = 0; $i < 7; $i++)
