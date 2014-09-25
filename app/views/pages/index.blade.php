@@ -145,18 +145,30 @@
             </div>
 
       <div class="col-sm-10">
-         <div class="divider-left">
+
+         <div class="row">
+            <div class="divider-left col-sm-6">
                  <span class="fa fa-star" style="color: #8b0000"></span><span> FEATURED</span>
-               </div>
+            </div>
+          <div class="col-sm-5" style="margin-top: 60px;"><a href="#" class="btn btn-default btn-sm pull-right">SEE ALL</a></div>
+         </div>
+
                <div class="row">
                      @for($i = 0; $i < 5; $i++)
                       @include('pages.partials.media-item')
                      @endfor
                </div>
 
-              <div class="divider-right">
-                      <span><span class="fa fa-bookmark" style="color: #daa520"></span> POPULAR</span>
-                    </div>
+                <div class="row">
+                 <div class="col-sm-6" style="margin-top: 60px;">
+                    <a href="#" class="btn btn-default btn-sm pull-left">SEE ALL</a>
+                 </div>
+                  <div class="divider-right col-sm-5">
+                     <span><span class="fa fa-bookmark" style="color: #daa520"></span> POPULAR</span>
+                </div>
+
+               </div>
+
                     <div class="row">
                     @for($i = 0; $i < 8; $i++)
                          @include('pages.partials.media-item')
@@ -164,8 +176,12 @@
                     </div>
 
 
-                   <div class="divider-left">
-                     <span class="fa fa-flag" style="color: #006400"></span><span> RECENT RELEASE</span>
+
+                   <div class="row">
+                       <div class="divider-left col-sm-6">
+                        <span class="fa fa-flag" style="color: #006400"></span><span> RECENT RELEASE</span>
+                      </div>
+                     <div class="col-sm-5" style="margin-top: 60px;"><a href="#" class="btn btn-default btn-sm pull-right">SEE ALL</a></div>
                    </div>
                    <div class="row">
                          @for($i = 0; $i < 7; $i++)
