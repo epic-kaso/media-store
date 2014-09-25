@@ -145,7 +145,7 @@
             </div>
 
       <div class="col-sm-10">
-         <div class="media-item divider-left">
+         <div class="divider-left">
                  <span class="fa fa-star" style="color: #8b0000"></span><span> FEATURED</span>
                </div>
                <div class="row">
@@ -154,7 +154,7 @@
                      @endfor
                </div>
 
-              <div class="media-item divider-right">
+              <div class="divider-right">
                       <span><span class="fa fa-bookmark" style="color: #daa520"></span> POPULAR</span>
                     </div>
                     <div class="row">
@@ -164,7 +164,7 @@
                     </div>
 
 
-                   <div class="media-item divider-left">
+                   <div class="divider-left">
                      <span class="fa fa-flag" style="color: #006400"></span><span> RECENT RELEASE</span>
                    </div>
                    <div class="row">
