@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app='MediaStoreUser'> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" ng-app='MediaStoreUser'> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" ng-app='MediaStoreUser'> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" ng-app='MediaStoreUser'> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href='css/bootstrap.min.css'/>
-        <link rel="stylesheet" href='css/font-awesome-4.2.0/css/font-awesome.min.css'/>
-        <link rel="stylesheet" href='css/main.css'/>
-
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
-    <div class="media-store-body" >
+@include('pages.partials.header')
+<div class="media-store-body" >
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -217,32 +199,21 @@
 
     </div>
     <div class="media-player">
-        <div class='speaker'
-        data-poster="audio1_poster"
-        data-title="audio1_title"
-        data-audio="audio1"
-        data-autoplay="false"
-        data-pauseothers="true" jplayer></div>
-    </div>
-    </div>
-     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-        <script src="js/vendor/jquery.jplayer.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/angular.min.js"></script>
-        <script src="js/app/start.js"></script>
-        <script src="js/app/directives/jplayer.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <div class="container">
+            <div class="col-sm-4">
+                <div class='speaker'
+                        data-audio="audio1"
+                        data-autoplay="false"
+                        data-pauseothers="true" jplayer>
+                </div>
+                <p>
+                    <img ng-src="<% audio1_poster %>" class="img-responsive" style="width: 50px;float: left"/>
+                    <span ng-bind="audio1_title"></span>
+                    {{--<span>Other info</span>--}}
+                </p>
+            </div>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-    </body>
-</html>
+        </div>
+    </div>
+</div>
+@include('pages.partials.footer')

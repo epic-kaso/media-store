@@ -1,11 +1,13 @@
 App.directive('jplayer', function() {
     return {
         restrict: 'EA',
-        template: '<div></div>',
+        template: '<div><span class="fa fa-play play"></span>' +
+        '<span class="fa fa-pause pause"></span><div class="me-j-player"></div></div>',
         link: function(scope, element, attrs) {
             var $control = element,
-                $player = $control.children('div'),
-                cls = 'pause';
+                $player = $control.find('div.me-j-player'),
+                cls = 'span.pause',
+                play = 'span.play';
 
             var updatePlayer = function() {
                 $player.jPlayer({
@@ -14,33 +16,36 @@ App.directive('jplayer', function() {
                     swfPath: 'js/jplayer/',
                     supplied: 'mp3',
                     solution: 'html, flash',
-                    size: {width: '50px',height: '50px'},
-                    backgroundColor: '#ffffff',
                     preload: 'auto',
                     wmode: 'window',
                     ready: function () {
                         $player
                             .jPlayer("setMedia", {
-                                mp3: scope.$eval(attrs.audio),
-                                title: scope.$eval(attrs.title),
-                                poster: scope.$eval(attrs.poster)
+                                mp3: scope.$eval(attrs.audio)
                             })
                             .jPlayer(attrs.autoplay === 'true' ? 'play' : 'stop');
                     },
                     play: function() {
+                        $control.find(play).hide();
+                        $control.find(cls).show();
                         $control.addClass(cls);
-
                         if (attrs.pauseothers === 'true') {
                             $player.jPlayer('pauseOthers');
                         }
                     },
                     pause: function() {
+                        $control.find(cls).hide();
+                        $control.find(play).show();
                         $control.removeClass(cls);
                     },
                     stop: function() {
+                        $control.find(cls).hide();
+                        $control.find(play).show();
                         $control.removeClass(cls);
                     },
                     ended: function() {
+                        $control.find(cls).hide();
+                        $control.find(play).show();
                         $control.removeClass(cls);
                     }
                 })

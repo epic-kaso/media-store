@@ -133,23 +133,33 @@ body{
 }
 .media-player {
     position: fixed;
-    display: none;
+    z-index: 500;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px;
-    background-color: rgba(0,0,0,.8);
+    height: 40px;
+    background-color: rgba(0,0,0,.9);
+}
+
+.media-player p > span {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+div.media-player  span.fa{
+    font-size: 30px;
+    margin: 6px;
+    cursor: pointer;
 }
 
 .speaker {
     width:48px;
     height:48px;
     float: left;
-    background-color: #ffffff;
-    background-image: url(http://www.stillonthehill.com/images/Play-grey.png);
-}
-.speaker.pause {
-    background-image: url(http://www.iconhot.com/icon/png/addictive-flavour/48/button-red-pause.png);
+    color: #f2f2f2;
 }
 
 img#jp_poster_0{
