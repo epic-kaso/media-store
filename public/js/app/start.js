@@ -4,7 +4,19 @@ var App = angular.module('MediaStoreUser',[], function($interpolateProvider) {
 });
 
 App.run(function($rootScope) {
-    $rootScope.audio1 = '/audio/demo.mp3';
-    $rootScope.audio1_title = "Nas Accident Murderer";
-    $rootScope.audio1_poster = "/img/cover.jpg";
+
+});
+
+App.controller('MediaController',function($scope){
+    $scope.audio = {};
+    $scope.audio.url = '/audio/';
+    $scope.audio.title = "--";
+    $scope.audio.poster = "/img/cover.jpg";
+
+    $scope.play = function(media_url,title,poster){
+        $scope.audio.url = media_url;
+        $scope.audio.title = title;
+        $scope.audio.poster = poster;
+        console.log('Play called with '+media_url);
+    }
 });

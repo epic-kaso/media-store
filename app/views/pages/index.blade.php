@@ -1,62 +1,10 @@
 @include('pages.partials.header')
-<div class="media-store-body" >
+<div class="media-store-body" ng-controller="MediaController" >
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div class="container">
-        <div class="row">
-             <div class="col-sm-8">
-              <a class="navbar-brand" href="#">
-              <span class="fa fa-play-circle" style="
-                  color: #d35400;
-                  font-size: 1.9em;
-              "></span>
-              <span style="
-                  font-size: 1.9em;
-              ">Media<i style="
-                         font-weight: 800;
-                         font-style: normal;
-                     ">Store</i></span>
-              </a>
-             </div>
-             <div class="col-sm-4">
-                <form class="navbar-form navbar-right" role="form">
-                    <div class="input-group input-group-lg">
-                      <input type="text" placeholder="Search" class="form-control">
-                       <span class="input-group-btn">
-                            <button type="submit" class="btn btn-primary"><span class="fa fa-search"></span></button>
-                       </span>
-                    </div>
-
-                  </form>
-             </div>
-        </div>
-        <div class="navbar navbar-inverse" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Recent Releases</a></li>
-                <li><a href="#">Genres</a></li>
-                <li><a href="#">Artists</a></li>
-                <li><a href="#">Album</a></li>
-                <li><a href="#">Gospel</a></li>
-                <li><a href="#">Media Partners</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
-            </ul>
-        </div><!--/.navbar-collapse -->
-      </div>
+        @include('pages.partials.page-header')
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -137,7 +85,7 @@
 
                <div class="row">
                      @for($i = 0; $i < 5; $i++)
-                      @include('pages.partials.media-item')
+                      @include('pages.partials.media-item',['item'=>$media[rand(0,count($media) - 1)]])
                      @endfor
                </div>
 
@@ -153,7 +101,7 @@
 
                     <div class="row">
                     @for($i = 0; $i < 8; $i++)
-                         @include('pages.partials.media-item')
+                         @include('pages.partials.media-item',['item'=>$media[rand(0,count($media) - 1)]])
                      @endfor
                     </div>
 
@@ -167,7 +115,7 @@
                    </div>
                    <div class="row">
                          @for($i = 0; $i < 7; $i++)
-                            @include('pages.partials.media-item')
+                            @include('pages.partials.media-item',['item'=>$media[rand(0,count($media) - 1)]])
                          @endfor
                    </div>
       </div>
@@ -176,7 +124,7 @@
         <div class="row">
 
             @for($i = 0; $i < 7; $i++)
-                @include('pages.partials.sidebar-media-item')
+                @include('pages.partials.sidebar-media-item',['item'=>$media[rand(0,count($media) - 1)]])
             @endfor
         </div>
       </div>
@@ -196,24 +144,11 @@
                     </div>
                 </div>
       </div>
-
     </div>
-    <div class="media-player">
-        <div class="container">
-            <div class="col-sm-4">
-                <div class='speaker'
-                        data-audio="audio1"
-                        data-autoplay="false"
-                        data-pauseothers="true" jplayer>
-                </div>
-                <p>
-                    <img ng-src="<% audio1_poster %>" class="img-responsive" style="width: 50px;float: left"/>
-                    <span ng-bind="audio1_title"></span>
-                    {{--<span>Other info</span>--}}
-                </p>
-            </div>
-
-        </div>
-    </div>
+    @include('pages.partials.media-player')
+    @include('pages.partials.login-dialog')
+    @include('pages.partials.signup-dialog',['post_url'=>$post_url])
 </div>
+
+
 @include('pages.partials.footer')

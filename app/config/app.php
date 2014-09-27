@@ -124,8 +124,11 @@ return array(
 		'Way\Generators\GeneratorsServiceProvider',
         'Laracasts\Validation\ValidationServiceProvider',
         'Laracasts\Commander\CommanderServiceProvider',
-        'Laracasts\Flash\FlashServiceProvider'
-
+        'Laracasts\Flash\FlashServiceProvider',
+        'Zizaco\Confide\ServiceProvider',
+        'Zizaco\Entrust\EntrustServiceProvider',
+        'MediaStore\Context\ContextServiceProvider',
+        'MediaStore\MediaStoreServiceProvider'
 	),
 
 	/*
@@ -192,8 +195,10 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
-		'Flash' 			=> 'Laracasts\Flash\Flash'
-
+		'Flash' 			=> 'Laracasts\Flash\Flash',
+        'Confide'           => 'Zizaco\Confide\Facade',
+        'Entrust'           => 'Zizaco\Entrust\EntrustFacade',
+        'Context'           => 'MediaStore\Context\ContextFacade'
 	),
 
 );

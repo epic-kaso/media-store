@@ -8,6 +8,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
     background-color: #f2f2f2;
+    background-image: url('/img/prism.jpg');
     font-weight: 300;
     position: relative;
 }
@@ -167,7 +168,10 @@ img#jp_poster_0{
     max-width: 100%;
     height: auto;
 }
-
+.meta-info h4{
+    height: 35px;
+    overflow: hidden;
+}
 .meta-info > ul{
     list-style: none;
     padding-left: 10px;
@@ -237,4 +241,37 @@ img#jp_poster_0{
     color: #d35400;
 }
 
+
+/* Modal Css */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    background-clip: padding-box;
+    border-radius: 0px;
+    outline: 0;
+}
+
+.modal {
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    background-color: rgba(255,255,255,0.9);
+}
+
+/*#login-dialog{*/
+    /*display: block;*/
+    /*background-color: rgba(255,255,255,0.9);*/
+/*}*/
 

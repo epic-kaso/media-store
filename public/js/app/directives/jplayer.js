@@ -1,8 +1,11 @@
 App.directive('jplayer', function() {
     return {
         restrict: 'EA',
-        template: '<div><span class="fa fa-play play"></span>' +
-        '<span class="fa fa-pause pause"></span><div class="me-j-player"></div></div>',
+        template: '<div style="display: inline-block" ng-transclude></div><div class="me-j-player"></div>',
+        transclude: true,
+        scope: {
+            audioObject: '='
+        },
         link: function(scope, element, attrs) {
             var $control = element,
                 $player = $control.find('div.me-j-player'),
@@ -21,7 +24,7 @@ App.directive('jplayer', function() {
                     ready: function () {
                         $player
                             .jPlayer("setMedia", {
-                                mp3: scope.$eval(attrs.audio)
+                                mp3: scope.audioObject.url
                             })
                             .jPlayer(attrs.autoplay === 'true' ? 'play' : 'stop');
                     },
@@ -29,9 +32,7 @@ App.directive('jplayer', function() {
                         $control.find(play).hide();
                         $control.find(cls).show();
                         $control.addClass(cls);
-                        if (attrs.pauseothers === 'true') {
-                            $player.jPlayer('pauseOthers');
-                        }
+                        $player.jPlayer('pauseOthers');
                     },
                     pause: function() {
                         $control.find(cls).hide();
@@ -55,7 +56,11 @@ App.directive('jplayer', function() {
                     });
             };
 
-            scope.$watch(attrs.audio, updatePlayer);
+            scope.$watch('audioObject.url',function(n,o){
+                console.log('Watch trigger');
+                $player.jPlayer("destroy");
+                updatePlayer();
+            });
             updatePlayer();
         }
     };

@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'driver' => 'smtp',
+	'driver' => 'mandrill',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,18 +54,18 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+    'from' => array('address' => 'admin@mediastore.kaso.co', 'name' => 'Mediastore.Kaso.Co Notification'),
 
-	/*
-	|--------------------------------------------------------------------------
-	| E-Mail Encryption Protocol
-	|--------------------------------------------------------------------------
-	|
-	| Here you may specify the encryption protocol that should be used when
-	| the application send e-mail messages. A sensible default using the
-	| transport layer security protocol should provide great security.
-	|
-	*/
+    /*
+    |--------------------------------------------------------------------------
+    | E-Mail Encryption Protocol
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the encryption protocol that should be used when
+    | the application send e-mail messages. A sensible default using the
+    | transport layer security protocol should provide great security.
+    |
+    */
 
 	'encryption' => 'tls',
 

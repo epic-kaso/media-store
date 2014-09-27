@@ -1,19 +1,90 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
+/**/
 
-Route::get('/', function()
-{
-	return View::make('pages.index');
-});
+    Route::get('/',[
+        'before'=>['consumer_signup'],
+        'as'=>'home',
+        'uses'=>'PagesController@index'
+    ]);
 
-Route::resource('roles','RolesController');
+    Route::get('logout', ['before'=>'auth','as'=>'users.logout','uses'=>'UsersController@logout']);
+    /**
+     * Consumer Account Routes
+     */
+    Route::group(['before'=>['consumer_signup','guest']],function(){
+        Route::get('users/create',
+            ['as'=>'consumer.create','uses'=>'UsersController@create']);
+        Route::post('users',
+            ['as'=>'consumer.create','uses'=>'UsersController@store']);
+        Route::get('users/login',
+            ['as'=>'consumer.login','uses'=>'UsersController@login']);
+        Route::post('users/login',
+            ['as'=>'consumer.login','uses'=>'UsersController@doLogin']);
+        Route::get('users/confirm/{code}',
+            ['as'=>'consumer.confirm','uses'=>'UsersController@confirm']);
+        Route::get('users/forgot_password',
+            ['as'=>'consumer.forgot_password','uses'=>'UsersController@forgotPassword']);
+        Route::post('users/forgot_password',
+            ['as'=>'consumer.forgot_password','uses'=>'UsersController@doForgotPassword']);
+        Route::get('users/reset_password/{token}',
+            ['as'=>'consumer.reset_password','uses'=>'UsersController@resetPassword']);
+        Route::post('users/reset_password',
+            ['as'=>'consumer.reset_password','uses'=>'UsersController@doResetPassword']);
+    });
+
+    /**
+     * Media Partners Account Route
+     */
+    Route::group(['before'=>['partner_signup','guest']],function(){
+        Route::get('partner/create',
+            ['as'=>'partner.create','uses'=>'UsersController@create']);
+        Route::post('partner',
+            ['as'=>'partner.create','uses'=>'UsersController@store']);
+        Route::get('partner/login',
+            ['as'=>'partner.login','uses'=>'UsersController@login']);
+        Route::post('partner/login',
+            ['as'=>'partner.login','uses'=>'UsersController@doLogin']);
+        Route::get('partner/confirm/{code}',
+            ['as'=>'partner.confirm','uses'=>'UsersController@confirm']);
+        Route::get('partner/forgot_password',
+            ['as'=>'partner.forgot_password','uses'=>'UsersController@forgotPassword']);
+        Route::post('partner/forgot_password',
+            ['as'=>'partner.forgot_password','uses'=>'UsersController@doForgotPassword']);
+        Route::get('partner/reset_password/{token}',
+            ['as'=>'partner.reset_password','uses'=>'UsersController@resetPassword']);
+        Route::post('partner/reset_password',
+            ['as'=>'partner.reset_password','uses'=>'UsersController@doResetPassword']);
+    });
+
+    /**
+     * Media Partner Dashboard Routes
+     */
+    Route::group(['prefix'=>'media-partner','before'=>'mediapartner_role'],function(){
+        Route::get('/',['as'=>'mediapartner-dashboard',function(){
+            echo 'Media Partner Dashboard';
+        }]);
+    });
+
+    /**
+     * Admin Dashboard Routes
+     */
+    Route::group(['prefix'=>'gatekeeper','before'=>'mediapartner_role'],function(){
+        Route::get('/',['as'=>'admin-dashboard',function(){
+            echo 'Admin Dashboard';
+        }]);
+    });
+
+    /**
+     * Owner Dashboard Routes
+     */
+    Route::group(['prefix'=>'manager','before'=>'mediapartner_role'],function(){
+        Route::get('/',['as'=>'owner-dashboard',function(){
+            echo 'Owner Dashboard';
+        }]);
+    });
+
+
+
+Route::when('admin*','admin_role');
+

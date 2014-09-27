@@ -11,7 +11,9 @@
 |
 */
 
-App::before(function($request)
+    use MediaStore\Repositories\User\RoleRepository;
+
+    App::before(function($request)
 {
 	//
 });
@@ -22,6 +24,44 @@ App::after(function($request, $response)
 	//
 });
 
+
+    /*
+     *ROle Based Filters
+     */
+
+    Route::filter('owner_role', function()
+    {
+        if (! Entrust::hasRole('Owner') ) // Checks the current user
+        {
+            App::abort(404);
+        }
+    });
+
+    Route::filter('admin_role', function()
+    {
+        if (! Entrust::hasRole('Admin') ) // Checks the current user
+        {
+            App::abort(404);
+        }
+    });
+
+
+    Route::filter('consumer_role', function()
+    {
+        if (! Entrust::hasRole('Consumer') ) // Checks the current user
+        {
+            App::abort(404);
+        }
+    });
+
+
+    Route::filter('mediapartner_role', function()
+    {
+        if (! Entrust::hasRole('MediaPartner') ) // Checks the current user
+        {
+            App::abort(404);
+        }
+    });
 /*
 |--------------------------------------------------------------------------
 | Authentication Filters
@@ -46,6 +86,10 @@ Route::filter('auth', function()
 			return Redirect::guest('login');
 		}
 	}
+
+    if(Entrust::hasRole('MediaPartner')){
+        Context::set(Auth::user());
+    }
 });
 
 
@@ -88,3 +132,19 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+
+    Route::filter('partner_signup',function(){
+       $cxt = App::make('MediaStore\Context\SignUpContext\SignupContext');
+        $cxt->set(RoleRepository::MediaPartner);
+    });
+
+    Route::filter('consumer_signup',function(){
+        $cxt = App::make('MediaStore\Context\SignUpContext\SignupContext');
+        $cxt->set(RoleRepository::Consumer);
+    });
+
+    Route::filter('admin_signup',function(){
+        $cxt = App::make('MediaStore\Context\SignUpContext\SignupContext');
+        $cxt->set(RoleRepository::ADMIN);
+    });
