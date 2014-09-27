@@ -12,7 +12,10 @@
 
         <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/fileinput.min.css') }}">
         <script src="{{ URL::asset('js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
+
+
     </head>
     <body>
     <!--[if lt IE 7]>

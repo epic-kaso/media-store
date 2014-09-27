@@ -11,7 +11,9 @@
 |
 */
 
-ClassLoader::addDirectories(array(
+    use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
+    ClassLoader::addDirectories(array(
 
 	app_path().'/commands',
 	app_path().'/controllers',
@@ -46,10 +48,19 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 |
 */
 
-App::error(function(Exception $exception, $code)
-{
-	Log::error($exception);
-});
+
+
+    App::error(function(Symfony\Component\HttpKernel\Exception\HttpException $exception,$code){
+        return View::make("errors.403",compact('code'));
+    });
+    App::error(function(NotFoundHttpException $exception,$code){
+        return View::make("errors.404",compact('code'));
+    });
+    App::error(function(Exception $exception, $code)
+    {
+        Log::error($exception);
+    });
+
 
 /*
 |--------------------------------------------------------------------------

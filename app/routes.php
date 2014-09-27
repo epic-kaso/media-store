@@ -61,13 +61,7 @@
      * Media Partner Dashboard Routes
      */
     Route::group(['prefix'=>'media-partner','before'=>'mediapartner_role'],function(){
-        Route::get('/',['as'=>'mediapartner-dashboard',function(){
-//            $processor = App::make('MediaStore\Media\AudioMediaProcessor');
-//            //dd(base_path('public/audio/demo1.mp3'));
-//            $processor->setMedia(base_path('public/audio/demo1.mp3'));
-//            echo json_encode($processor->process());
-            echo 'Media Partner Dashboard';
-        }]);
+        Route::get('/',['as'=>'mediapartner-dashboard','uses'=>'MediapartnerController@dashboard']);
     });
 
     /**
@@ -87,6 +81,12 @@
             echo 'Owner Dashboard';
         }]);
     });
+
+    /**
+     * Media Item Resource
+     */
+
+    Route::resource('media-items','MediaItemsController');
 
 
 

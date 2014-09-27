@@ -128,7 +128,8 @@ return array(
         'Zizaco\Confide\ServiceProvider',
         'Zizaco\Entrust\EntrustServiceProvider',
         'MediaStore\Context\ContextServiceProvider',
-        'MediaStore\MediaStoreServiceProvider'
+        'MediaStore\MediaStoreServiceProvider',
+        'Codesleeve\LaravelStapler\LaravelStaplerServiceProvider'
 	),
 
 	/*

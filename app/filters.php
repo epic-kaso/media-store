@@ -31,7 +31,7 @@ App::after(function($request, $response)
 
     Route::filter('owner_role', function()
     {
-        if (! Entrust::hasRole('Owner') ) // Checks the current user
+        if (! Entrust::hasRole(RoleRepository::Owner) ) // Checks the current user
         {
             App::abort(404);
         }
@@ -39,7 +39,7 @@ App::after(function($request, $response)
 
     Route::filter('admin_role', function()
     {
-        if (! Entrust::hasRole('Admin') ) // Checks the current user
+        if (! Entrust::hasRole(RoleRepository::ADMIN) ) // Checks the current user
         {
             App::abort(404);
         }
@@ -48,7 +48,7 @@ App::after(function($request, $response)
 
     Route::filter('consumer_role', function()
     {
-        if (! Entrust::hasRole('Consumer') ) // Checks the current user
+        if (! Entrust::hasRole(RoleRepository::Consumer) ) // Checks the current user
         {
             App::abort(404);
         }
@@ -57,11 +57,24 @@ App::after(function($request, $response)
 
     Route::filter('mediapartner_role', function()
     {
-        if (! Entrust::hasRole('MediaPartner') ) // Checks the current user
+        if (! Entrust::hasRole(RoleRepository::MediaPartner) ) // Checks the current user
         {
             App::abort(404);
         }
     });
+
+    Route::filter('mediaitem_create', function()
+    {
+        if (! Entrust::hasRole(RoleRepository::ADMIN)
+            && ! Entrust::hasRole(RoleRepository::MediaPartner)
+            && ! Entrust::hasRole(RoleRepository::Owner) ) // Checks the current user
+        {
+            App::abort(403);
+        }
+    });
+
+    Route::when( 'media-items*','mediaitem_create');
+
 /*
 |--------------------------------------------------------------------------
 | Authentication Filters
