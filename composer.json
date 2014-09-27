@@ -14,8 +14,7 @@
         "zizaco/entrust": "~1.2",
         "codesleeve/laravel-stapler": "dev-master",
         "graham-campbell/flysystem": "~1.0@dev",
-        "way/generators": "2.*",
-        "kartik-v/bootstrap-fileinput": "dev-master"
+        "way/generators": "2.*"
 	},	
     "require-dev": {
         "mockery/mockery": "0.9.*",
