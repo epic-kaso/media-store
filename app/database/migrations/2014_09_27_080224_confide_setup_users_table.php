@@ -9,6 +9,7 @@ class ConfideSetupUsersTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('users');
         // Creates the users table
         Schema::create('users', function ($table) {
             $table->increments('id');

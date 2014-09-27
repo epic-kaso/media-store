@@ -12,6 +12,7 @@ class EntrustSetupTables extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('roles');
         // Creates the roles table
         Schema::create('roles', function ($table) {
             $table->increments('id')->unsigned();
@@ -19,6 +20,7 @@ class EntrustSetupTables extends Migration
             $table->timestamps();
         });
 
+        Schema::dropIfExists('assigned_roles');
         // Creates the assigned_roles (Many-to-Many relation) table
         Schema::create('assigned_roles', function ($table) {
             $table->increments('id')->unsigned();
@@ -29,6 +31,7 @@ class EntrustSetupTables extends Migration
             $table->foreign('role_id')->references('id')->on('roles');
         });
 
+        Schema::dropIfExists('permission');
         // Creates the permissions table
         Schema::create('permissions', function ($table) {
             $table->increments('id')->unsigned();
@@ -37,6 +40,7 @@ class EntrustSetupTables extends Migration
             $table->timestamps();
         });
 
+        Schema::dropIfExists('permission_role');
         // Creates the permission_role (Many-to-Many relation) table
         Schema::create('permission_role', function ($table) {
             $table->increments('id')->unsigned();

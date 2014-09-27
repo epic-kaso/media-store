@@ -12,6 +12,7 @@ class CreateMediaItemsTable extends Migration {
 	 */
 	public function up()
 	{
+        Schema::dropIfExists('media_items');
 		Schema::create('media_items', function(Blueprint $table)
 		{
 			$table->increments('id');
@@ -26,6 +27,7 @@ class CreateMediaItemsTable extends Migration {
 			$table->timestamps();
 		});
 
+        Schema::dropIfExists('media_item_groups');
         Schema::create('media_item_groups',function(Blueprint $table){
             $table->increments('id');
             $table->string('title')->index();
