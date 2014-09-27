@@ -62,6 +62,10 @@
      */
     Route::group(['prefix'=>'media-partner','before'=>'mediapartner_role'],function(){
         Route::get('/',['as'=>'mediapartner-dashboard',function(){
+//            $processor = App::make('MediaStore\Media\AudioMediaProcessor');
+//            //dd(base_path('public/audio/demo1.mp3'));
+//            $processor->setMedia(base_path('public/audio/demo1.mp3'));
+//            echo json_encode($processor->process());
             echo 'Media Partner Dashboard';
         }]);
     });
@@ -69,7 +73,7 @@
     /**
      * Admin Dashboard Routes
      */
-    Route::group(['prefix'=>'gatekeeper','before'=>'mediapartner_role'],function(){
+    Route::group(['prefix'=>'gatekeeper','before'=>'admin_role'],function(){
         Route::get('/',['as'=>'admin-dashboard',function(){
             echo 'Admin Dashboard';
         }]);
@@ -78,7 +82,7 @@
     /**
      * Owner Dashboard Routes
      */
-    Route::group(['prefix'=>'manager','before'=>'mediapartner_role'],function(){
+    Route::group(['prefix'=>'manager','before'=>'owner_role'],function(){
         Route::get('/',['as'=>'owner-dashboard',function(){
             echo 'Owner Dashboard';
         }]);

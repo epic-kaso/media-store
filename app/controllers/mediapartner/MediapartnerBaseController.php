@@ -6,7 +6,7 @@
 	common/ related merchant methods and properties can be placed here.
 */
 
-class MerchantBaseController extends BaseController {
+class MediapartnerBaseController extends BaseController {
 
 
 }

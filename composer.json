@@ -24,7 +24,7 @@
 			"app/commands",
 			"app/controllers",
             "app/controllers/admin",
-            "app/controllers/merchant",
+            "app/controllers/mediapartner",
             "app/controllers/pages",
             "app/controllers/users",
 			"app/models",
