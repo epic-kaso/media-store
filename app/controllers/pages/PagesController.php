@@ -1,5 +1,6 @@
 <?php
     use MediaStore\Context\SignUpContext\SignupContext;
+    use MediaStore\Repositories\Media\MediaRepository;
 
     /**
 	@class PagesController
@@ -23,15 +24,30 @@ class PagesController extends BaseController {
 
     private $account_context;
     private $repo;
+    private $mediaRepository;
 
-    function __construct(SignupContext $account_context)
+    function __construct(SignupContext $account_context,MediaRepository $mediaRepository)
     {
+        $this->mediaRepository = $mediaRepository;
         $this->account_context = $account_context;
         $this->repo = App::make('MediaStore\Repositories\User\UserRepository');
     }
 
     public function index(){
+        $medias = $this->mediaRepository->all();
+
+
         $data = [];
+
+        foreach($medias as $media){
+            $itm = new stdClass();
+            $itm->title = $media->title;
+            $itm->img_url = $media->album_art->url('medium');
+            $itm->mp3 = Flysystem::get($media->preview_path);
+
+            $data[] = $itm;
+
+        }
         $item = new stdClass();
         $item->img_url = 'img/wizkid-ayo.jpg';
         $item->mp3 = 'audio/demo.mp3';
