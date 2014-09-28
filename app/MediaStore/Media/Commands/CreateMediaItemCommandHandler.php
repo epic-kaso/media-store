@@ -53,11 +53,19 @@ class CreateMediaItemCommandHandler implements CommandHandler {
 
     private function processUpload($command,$media){
         $path = $this->storageService->store($command->file,$this->scope->id());
-        \Queue::push(function($job) use($media,$path) {
-            $this->audioMediaProcessor->setMedia($path);
-            $response = $this->audioMediaProcessor->process();
-            $preview_path = $this->storageService->storePath($response->media_preview_url,$this->scope->id());
-            $this->mediaRepository->updateFileInfo($media->id,$path,$preview_path);
+        $this->mediaRepository->updateFileInfo($media->id,$path);
+        $scope_id = $this->scope->id();
+        $media_id= $media->id;
+
+        \Queue::push(function($job) use($media_id,$path,$scope_id) {
+            $audioProcessor = \App::make('MediaStore\Media\AudioMediaProcessor');
+            $storageService = \App::make('MediaStore\Services\StorageService');
+            $repo  = \App::make('MediaStore\Repositories\Media\MediaRepository');
+
+            $audioProcessor->setMedia($path);
+            $response = $audioProcessor->process();
+            $preview_path = $storageService->storePath($response->media_preview_url,$scope_id);
+            $repo->updateFileInfo($media_id,$path,$preview_path);
             $job->delete();
         });
     }
