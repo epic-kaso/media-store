@@ -52,8 +52,8 @@ class CreateMediaItemCommandHandler implements CommandHandler {
     }
 
     private function processUpload($command,$media){
-        \Queue::push(function($job) use($command,$media) {
-            $path = $this->storageService->store($command->file,$this->scope->id());
+        $path = $this->storageService->store($command->file,$this->scope->id());
+        \Queue::push(function($job) use($media,$path) {
             $this->audioMediaProcessor->setMedia($path);
             $response = $this->audioMediaProcessor->process();
             $preview_path = $this->storageService->storePath($response->media_preview_url,$this->scope->id());
