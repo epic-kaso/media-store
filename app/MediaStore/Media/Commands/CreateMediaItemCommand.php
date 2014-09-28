@@ -6,12 +6,8 @@ class CreateMediaItemCommand {
     public $description;
     public $file;
     public $album_art;
-    /**
-     * @var null
-     */
     public $group_id;
     public $price;
-
     /**
      * @param $title
      * @param $description

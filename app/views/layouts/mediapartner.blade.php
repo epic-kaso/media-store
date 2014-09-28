@@ -49,7 +49,9 @@
     </div>
 </div>
 @show
+ <div class="col-sm-6 col-sm-offset-3">
 @include('flash::message')
 @include('partials._infos')
+</div>
 @yield('main-content')
 @include('layouts.partials.footer')

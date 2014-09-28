@@ -28,7 +28,12 @@ class CreateMediaItemValidator {
     }
 
     public function validate(CreateMediaItemCommand $command){
-        $data = get_object_vars($command);
+        $data = [
+            'album_art'=>$command->album_art,
+            'file'=>$command->file,
+            'title'=>$command->title,
+            'price'=>$command->price
+        ];
         $validation = \Validator::make($data,$this->rules);
         if($validation->fails()){
             throw new FormValidationException('Validation failed',$validation->errors());
