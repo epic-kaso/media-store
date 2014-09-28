@@ -12,7 +12,7 @@
         "laracasts/flash": "*",
         "zizaco/confide": "~4.0",
         "zizaco/entrust": "~1.2",
-        "codesleeve/laravel-stapler": "dev-master",
+        "codesleeve/laravel-stapler": "~1.0@dev",
         "graham-campbell/flysystem": "~1.0@dev",
         "way/generators": "2.*"
 	},	
@@ -46,13 +46,13 @@
 		"post-install-cmd": [
 			"php artisan clear-compiled",
 			"php artisan optimize",
-            "php artisan migrate:refresh",
+            "php artisan migrate:refresh --force",
             "php artisan db:seed"
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
 			"php artisan optimize",
-            "php artisan migrate:refresh",
+            "php artisan migrate:refresh --force",
             "php artisan db:seed"
 		],
 		"post-create-project-cmd": [
