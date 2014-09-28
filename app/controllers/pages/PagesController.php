@@ -36,14 +36,13 @@ class PagesController extends BaseController {
     public function index(){
         $medias = $this->mediaRepository->all();
 
-
         $data = [];
 
         foreach($medias as $media){
             $itm = new stdClass();
             $itm->title = $media->title;
             $itm->img_url = $media->album_art->url('medium');
-            $itm->mp3 = $media->file_path;
+            $itm->mp3 = $media->preview_path;
             $data[] = $itm;
 
         }

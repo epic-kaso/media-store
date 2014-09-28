@@ -2,8 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c7e8d64-2516-4358-bb7b-182fed78f367" name="Default" comment="implemetation of user login system n music playback bug fixes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/_infos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/mediapartner.blade.php" afterPath="$PROJECT_DIR$/app/views/layouts/mediapartner.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/006/medium/Capture.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/006/normal/Capture.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/006/original/Capture.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/006/thumb/Capture.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/007/medium/Capture.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/007/normal/Capture.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/007/original/Capture.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/007/thumb/Capture.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/files/1/audiompeg/DtIAE6axeV9NOWc40UPnsUScvgULFe.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/previews/1/KHbRBGHQVOwwlh8qoJ5NAkhZ54fMhG-preview.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/files/1/audiompeg/KHbRBGHQVOwwlh8qoJ5NAkhZ54fMhG.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/files/1/audiompeg/Lwnf4pCGiFzawDRTnSjWbGv3lpbo6Y.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/files/1/audiompeg/QAr1QKbXEwg3keszps3dx2UlNxLcuh.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/files/1/audiompeg/TypmMNua6MTQasdVVVwaBenLpSsU57.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/001/medium/approach_shpere_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/001/normal/approach_shpere_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/001/original/approach_shpere_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/001/thumb/approach_shpere_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/002/medium/approach_shpere_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/002/normal/approach_shpere_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/002/original/approach_shpere_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/002/thumb/approach_shpere_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/003/medium/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/003/normal/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/003/original/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/003/thumb/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/004/medium/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/004/normal/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/004/original/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/004/thumb/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/005/medium/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/005/normal/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/005/original/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/MediaItem/album_arts/000/000/005/thumb/approach_shpere_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/files/1/audiompeg/lyIchMFRqKZlIMIEMIeDemn6Kn4LJg.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/files/1/audiompeg/uJWwX7Pnh4wIdDQKdjpNMhYTdnPTWZ.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/MediaStore/Media/AudioMediaProcessor.php" afterPath="$PROJECT_DIR$/app/MediaStore/Media/AudioMediaProcessor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommand.php" afterPath="$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommandHandler.php" afterPath="$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommandHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pages/PagesController.php" afterPath="$PROJECT_DIR$/app/controllers/pages/PagesController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="media-store.iws" />
@@ -29,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mediapartner.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/mediapartner.blade.php">
+      <file leaf-file-name="AudioMediaProcessor.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/MediaStore/Media/AudioMediaProcessor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7083333" vertical-offset="910" max-vertical-offset="1560">
-              <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.7083333" vertical-offset="1950" max-vertical-offset="2574">
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -112,7 +150,6 @@
         <option value="$PROJECT_DIR$/app/MediaStore/Repositories/Media/EloquentMediaRepository.php" />
         <option value="$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemHandler.php" />
         <option value="$PROJECT_DIR$/app/views/media_items/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommand.php" />
         <option value="$PROJECT_DIR$/app/filters.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_09_27_104121_create_media_items_table.php" />
         <option value="$PROJECT_DIR$/app/MediaStore/Context/MediaPartnerContext.php" />
@@ -127,11 +164,12 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/controllers/mediapartner/MediaItemsController.php" />
         <option value="$PROJECT_DIR$/app/views/media_items/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/pages/PagesController.php" />
-        <option value="$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommandHandler.php" />
         <option value="$PROJECT_DIR$/app/MediaStore/Services/StorageService.php" />
-        <option value="$PROJECT_DIR$/app/MediaStore/Media/AudioMediaProcessor.php" />
         <option value="$PROJECT_DIR$/app/views/layouts/mediapartner.blade.php" />
+        <option value="$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommandHandler.php" />
+        <option value="$PROJECT_DIR$/app/controllers/pages/PagesController.php" />
+        <option value="$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommand.php" />
+        <option value="$PROJECT_DIR$/app/MediaStore/Media/AudioMediaProcessor.php" />
       </list>
     </option>
   </component>
@@ -196,7 +234,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media-store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media-store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="previews" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -211,32 +271,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media-store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media-store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -519,7 +553,13 @@
       <option name="project" value="LOCAL" />
       <updated>1411870483108</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="implemetation of user login system n music playback bug fixes">
+      <created>1411870710132</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1411870710132</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -667,14 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35214448" vertical-offset="2132" max-vertical-offset="2600">
           <caret line="88" column="32" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3265306" vertical-offset="0" max-vertical-offset="1040">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -943,42 +975,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pages/PagesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7916667" vertical-offset="728" max-vertical-offset="2262">
-          <caret line="48" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommandHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8333333" vertical-offset="1352" max-vertical-offset="2054">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/MediaStore/Services/StorageService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667" vertical-offset="1664" max-vertical-offset="2288">
-          <caret line="86" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="17550" max-vertical-offset="26650">
           <caret line="684" column="13" selection-start-line="683" selection-start-column="13" selection-end-line="683" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/MediaStore/Media/AudioMediaProcessor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.083333336" vertical-offset="1872" max-vertical-offset="2496">
-          <caret line="79" column="68" selection-start-line="74" selection-start-column="68" selection-end-line="74" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -1001,8 +1001,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/mediapartner.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7083333" vertical-offset="910" max-vertical-offset="1560">
-          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.625" vertical-offset="910" max-vertical-offset="1560">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommandHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5833333" vertical-offset="1222" max-vertical-offset="1924">
+          <caret line="66" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.625" vertical-offset="1612" max-vertical-offset="2236">
+          <caret line="78" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/MediaStore/Services/StorageService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667" vertical-offset="1664" max-vertical-offset="2288">
+          <caret line="86" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.041666668" vertical-offset="0" max-vertical-offset="988">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/MediaStore/Media/AudioMediaProcessor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7083333" vertical-offset="1950" max-vertical-offset="2574">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding />
         </state>
       </provider>

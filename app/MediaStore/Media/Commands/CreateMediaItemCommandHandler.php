@@ -64,8 +64,8 @@ class CreateMediaItemCommandHandler implements CommandHandler {
 
             $audioProcessor->setMedia($path);
             $response = $audioProcessor->process();
-            $preview_path = $storageService->storePath($response->media_preview_url,$scope_id);
-            $repo->updateFileInfo($media_id,$path,$preview_path);
+           // $preview_path = $storageService->storePath($response->media_preview_url,$scope_id);
+            $repo->updateFileInfo($media_id,$path,$response->media_preview_url);
             $job->delete();
         });
     }

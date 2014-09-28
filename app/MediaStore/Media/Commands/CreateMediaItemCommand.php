@@ -1,6 +1,5 @@
 <?php namespace MediaStore\Media\Commands;
 
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class CreateMediaItemCommand {
     public $title;
@@ -21,8 +20,7 @@ class CreateMediaItemCommand {
      * @param $price
      * @param null $group_id
      */
-    public function __construct($title,$description,UploadedFile $file,
-                                UploadedFile $album_art,$price,$group_id = null)
+    public function __construct($title,$description,$file,$album_art,$price,$group_id = null)
     {
         $this->title = $title;
         $this->description = $description;

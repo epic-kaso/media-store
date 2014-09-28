@@ -73,9 +73,9 @@ class AudioMediaProcessor implements MediaProcessor {
 
         $output = $this->getPreviewPath();
 
-        if($this->storageService->exists($output)){
-            $this->storageService->delete($output);
-        }
+//        if($this->storageService->exists($output)){
+//            $this->storageService->delete($output);
+//        }
 
         $command = "ffmpeg -t 30 -i {$this->media}  -acodec copy {$output}";
         return $command;
@@ -84,11 +84,14 @@ class AudioMediaProcessor implements MediaProcessor {
     private function getPreviewPath() {
         $ext = $this->storageService->extension($this->media);
         $name = $this->storageService->filename($this->media);
+        $name = str_replace(".$ext","-preview.$ext",$name);
         $context = \Context::id();
-        $rel = "previews/$context/$name.preview.$ext";
+        $rel = "previews/$context/$name";
+
         $path = public_path($rel);
         //$output = str_replace($ext,"preview.$ext",$this->media);
         $this->media_preview = $rel;
+        \File::makeDirectory(public_path("previews/$context/"),null,true);
         return $path;
     }
 
