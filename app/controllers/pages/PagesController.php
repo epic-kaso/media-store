@@ -43,7 +43,8 @@ class PagesController extends BaseController {
             $itm = new stdClass();
             $itm->title = $media->title;
             $itm->img_url = $media->album_art->url('medium');
-            $itm->mp3 = Flysystem::get($media->preview_path);
+            $itm->mp3 = 'audio/demo.mp3'; //Flysystem::get($media->preview_path);
+
 
             $data[] = $itm;
 
