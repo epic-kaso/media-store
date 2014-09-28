@@ -9,7 +9,6 @@
 namespace MediaStore\Media;
 
 
-use GrahamCampbell\Flysystem\FlysystemManager;
 use MediaStore\Services\StorageService;
 
 class AudioMediaProcessor implements MediaProcessor {
@@ -72,16 +71,25 @@ class AudioMediaProcessor implements MediaProcessor {
 
     private function getExecCommand() {
 
-        $ext = $this->storageService->extension($this->media);
-        $output = str_replace($ext,"preview.$ext",$this->media);
+        $output = $this->getPreviewPath();
 
         if($this->storageService->exists($output)){
             $this->storageService->delete($output);
         }
 
-        $this->media_preview = str_replace($ext,"preview.$ext",$this->relative_media);;
         $command = "ffmpeg -t 30 -i {$this->media}  -acodec copy {$output}";
         return $command;
+    }
+
+    private function getPreviewPath() {
+        $ext = $this->storageService->extension($this->media);
+        $name = $this->storageService->filename($this->media);
+        $context = \Context::id();
+        $rel = "previews/$context/$name.preview.$ext";
+        $path = public_path($rel);
+        //$output = str_replace($ext,"preview.$ext",$this->media);
+        $this->media_preview = $rel;
+        return $path;
     }
 
 

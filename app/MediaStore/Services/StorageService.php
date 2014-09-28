@@ -81,4 +81,9 @@ class StorageService {
         return $path;
     }
 
+    public function filename($media) {
+        $f = new \SplFileInfo($media);
+        return $f->getFilename();
+    }
+
 } 
