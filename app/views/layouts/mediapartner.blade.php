@@ -50,5 +50,6 @@
 </div>
 @show
 @include('flash::message')
+@include('partials._infos')
 @yield('main-content')
 @include('layouts.partials.footer')
