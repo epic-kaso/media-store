@@ -5,7 +5,7 @@
 
             <div class="col-sm-6 col-sm-offset-3">
              <h2>Create media</h2>
-                 {{ Form::open(['url'=>'#','files'=>true])  }}
+                 {{ Form::open(['url'=>route('media-items.store'),'files'=>true])  }}
                  <fieldset>
                         <!-- album_art text field -->
                         <div class="form-group">
@@ -13,8 +13,18 @@
                                 {{ Form::file('album_art',
                                 ['class'=>'form-control file',
                                  'data-preview-file-type'=>'image',
+                                 'data-allowed-preview-types'=>'image',
                                   'data-show-upload'=>'false',
                                   'data-browse-icon'=>'<i class="fa fa-file-image-o"></i>']) }}
+                        </div>
+
+                        <div class="form-group">
+                                {{ Form::label('file','Media File ') }}
+                                {{ Form::file('file',
+                                ['class'=>'form-control file',
+                                 'data-allowed-preview-types'=>'[audio,video]',
+                                  'data-show-upload'=>'false',
+                                  'data-browse-icon'=>'<i class="fa fa-file-audio-o"></i>']) }}
                         </div>
                         <!-- title text field -->
                         <div class="form-group">
@@ -29,13 +39,13 @@
                        <!-- Group text field -->
                        <div class="form-group">
                                {{ Form::label('Group','Media Group') }}
-                               {{ Form::text('Group',null,['class'=>'form-control','placeholder'=>'Media Group goes here']) }}
+                               {{ Form::text('group_id',null,['class'=>'form-control','placeholder'=>'Media Group goes here']) }}
                        </div>
 
                        <!-- Price text field -->
                        <div class="form-group">
                                {{ Form::label('Price','Price: ') }}
-                               {{ Form::text('Price',null,['class'=>'form-control','placeholder'=>'Price goes here']) }}
+                               {{ Form::text('price',null,['class'=>'form-control','placeholder'=>'Price goes here']) }}
                        </div>
 
 

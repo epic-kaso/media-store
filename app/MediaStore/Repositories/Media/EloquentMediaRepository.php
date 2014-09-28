@@ -19,6 +19,7 @@ use MediaStore\Repositories\TenantRepository;
  */
 class EloquentMediaRepository extends TenantRepository implements MediaRepository {
 
+    public $previewPath = "file_preview_path";
     /**
      * @var Model
      */
@@ -31,10 +32,10 @@ class EloquentMediaRepository extends TenantRepository implements MediaRepositor
 
 
     /**
-     * @param Model $model
+     * @param Model|\MediaItem $model
      * @param Context $scope
      */
-    public function __construct(Model $model, Context $scope)
+    public function __construct(\MediaItem $model, Context $scope)
     {
         $this->model = $model;
         $this->scope = $scope;
@@ -101,4 +102,53 @@ class EloquentMediaRepository extends TenantRepository implements MediaRepositor
         return $this->getManyByThroughColumn($key, $value, $with);
     }
 
+    public function create($data = [])
+    {
+        $data[$this->scope->column_name()] = $this->scope->id();
+        $media = $this->model->create($data);
+        return $media;
+    }
+
+    public function update($id,$data = [])
+    {
+        $modl = $this->model->find($id);
+        return $modl->update($data);
+    }
+
+    public function delete($id)
+    {
+        return $this->model->delete($id);
+    }
+
+    public function read($id)
+    {
+        return $this->find($id);
+    }
+
+    public function createFromMediaCommand($command,$file_path = null,$file_preview_path = null){
+        $media = $this->model->create([
+            'title'=>$command->title,
+            'description'=>$command->description,
+            'price'=>$command->price,
+            'album_art'=>$command->album_art,
+            'group_id'=>$command->group_id,
+            $this->scope->column_name() =>$this->scope->id(),
+            'file_path'=>$file_path,
+            'preview_path'=>$file_preview_path
+        ]);
+
+        return $media;
+    }
+
+    public function updateFileInfo($media_id,$file_path = null,$file_preview_path = null){
+        $media = $this->find($media_id);
+        if(!is_null($file_path)) {
+            $media->file_path = $file_path;
+        }
+        if(!is_null($file_preview_path)) {
+            $media->preview_path = $file_preview_path;
+        }
+
+        $media->save();
+    }
 }

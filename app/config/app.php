@@ -129,7 +129,8 @@ return array(
         'Zizaco\Entrust\EntrustServiceProvider',
         'MediaStore\Context\ContextServiceProvider',
         'MediaStore\MediaStoreServiceProvider',
-        'Codesleeve\LaravelStapler\LaravelStaplerServiceProvider'
+        'Codesleeve\LaravelStapler\LaravelStaplerServiceProvider',
+        'GrahamCampbell\Flysystem\FlysystemServiceProvider'
 	),
 
 	/*
@@ -199,7 +200,8 @@ return array(
 		'Flash' 			=> 'Laracasts\Flash\Flash',
         'Confide'           => 'Zizaco\Confide\Facade',
         'Entrust'           => 'Zizaco\Entrust\EntrustFacade',
-        'Context'           => 'MediaStore\Context\ContextFacade'
+        'Context'           => 'MediaStore\Context\ContextFacade',
+        'Flysystem'         => 'GrahamCampbell\Flysystem\Facades\Flysystem'
 	),
 
 );

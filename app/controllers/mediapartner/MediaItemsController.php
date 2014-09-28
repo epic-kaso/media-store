@@ -1,6 +1,9 @@
 <?php
 
-class MediaItemsController extends \BaseController {
+    use Laracasts\Validation\FormValidationException;
+    use MediaStore\Media\Commands\CreateMediaItemCommand;
+
+    class MediaItemsController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -32,7 +35,14 @@ class MediaItemsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		try{
+            $response = $this->execute(CreateMediaItemCommand::class);
+        }catch (FormValidationException $ex){
+            Flash::error($ex->getErrors());
+                return Redirect::back()->withInput()->withErrors($ex->getErrors());
+        }
+        return $response->id;
+
 	}
 
 	/**

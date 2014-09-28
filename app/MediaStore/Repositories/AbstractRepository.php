@@ -108,4 +108,6 @@ abstract class AbstractRepository {
 
         return $entity->has($relation)->get();
     }
+
+
 } 

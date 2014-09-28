@@ -1,5 +1,6 @@
 <?php namespace MediaStore;
 use Illuminate\Support\ServiceProvider;
+use MediaStore\Repositories\Media\EloquentMediaRepository;
 
 /**
  * Created by PhpStorm.
@@ -18,6 +19,12 @@ class MediaStoreServiceProvider extends ServiceProvider{
      */
     public function register()
     {
+        $this->mediaRepoBind();
+    }
 
+    private function mediaRepoBind(){
+        $this->app->bind('MediaStore\Repositories\Media\MediaRepository',function($app){
+            return $app->make('MediaStore\Repositories\Media\EloquentMediaRepository');
+        });
     }
 }

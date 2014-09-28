@@ -35,6 +35,9 @@ App::after(function($request, $response)
         {
             App::abort(404);
         }
+        if(Entrust::hasRole('MediaPartner')){
+            Context::set(Confide::user());
+        }
     });
 
     Route::filter('admin_role', function()
@@ -42,6 +45,9 @@ App::after(function($request, $response)
         if (! Entrust::hasRole(RoleRepository::ADMIN) ) // Checks the current user
         {
             App::abort(404);
+        }
+        if(Entrust::hasRole('MediaPartner')){
+            Context::set(Confide::user());
         }
     });
 
@@ -61,6 +67,9 @@ App::after(function($request, $response)
         {
             App::abort(404);
         }
+        if(Entrust::hasRole('MediaPartner')){
+            Context::set(Confide::user());
+        }
     });
 
     Route::filter('mediaitem_create', function()
@@ -70,6 +79,9 @@ App::after(function($request, $response)
             && ! Entrust::hasRole(RoleRepository::Owner) ) // Checks the current user
         {
             App::abort(403);
+        }
+        if(Entrust::hasRole('MediaPartner')){
+            Context::set(Confide::user());
         }
     });
 
@@ -101,7 +113,7 @@ Route::filter('auth', function()
 	}
 
     if(Entrust::hasRole('MediaPartner')){
-        Context::set(Auth::user());
+        Context::set(Confide::user());
     }
 });
 

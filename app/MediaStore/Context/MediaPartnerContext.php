@@ -55,6 +55,11 @@ class MediaPartnerContext implements Context {
         return $this->table_name;
     }
 
+    public function table()
+    {
+        return $this->table_name();
+    }
+
     /**
      * returns the contextual column name;
      * @return mixed
@@ -62,5 +67,10 @@ class MediaPartnerContext implements Context {
     public function column_name()
     {
         return $this->column_name;
+    }
+
+    public function column()
+    {
+        return $this->column_name();
     }
 }

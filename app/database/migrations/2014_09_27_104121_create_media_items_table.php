@@ -18,10 +18,10 @@ class CreateMediaItemsTable extends Migration {
 			$table->increments('id');
             $table->string('title')->index();
             $table->text('description')->nullable();
-            $table->string('file_path');
-            $table->string('preview_path');
+            $table->string('file_path')->nullable();
+            $table->string('preview_path')->nullable();
             $table->integer('mediapartner_id')->index();
-            $table->string('media_type');
+            $table->string('media_type')->nullable();
             $table->integer('group_id')->nullable();
             $table->text('metadata')->nullable();
 			$table->timestamps();

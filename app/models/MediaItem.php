@@ -20,4 +20,9 @@
 
         parent::__construct($attributes);
     }
+
+        public function getFilePath()
+        {
+            return $this->file_path;
+        }
 }

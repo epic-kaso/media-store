@@ -9,26 +9,29 @@
 namespace MediaStore\Media;
 
 
-use Illuminate\Filesystem\Filesystem;
+use GrahamCampbell\Flysystem\FlysystemManager;
+use MediaStore\Services\StorageService;
 
 class AudioMediaProcessor implements MediaProcessor {
 
     protected $media_preview;
+    protected $relative_media;
     private $media;
     /**
      * @var
      */
-    private $filesystem;
+    private $storageService;
 
-    function __construct(Filesystem $filesystem)
+    function __construct(StorageService $storageService)
     {
-        $this->filesystem = $filesystem;
+        $this->storageService = $storageService;
     }
 
 
     public function setMedia($media_path)
     {
-        if($this->filesystem->exists($media_path)){
+        $this->relative_media = $media_path;
+        if($media_path = $this->storageService->has($media_path)){
             $this->media = $media_path;
         }else{
             throw new \InvalidArgumentException('Media Path invalid');
@@ -45,16 +48,20 @@ class AudioMediaProcessor implements MediaProcessor {
         return "Audio";
     }
 
+    /**
+     * @return \stdClass with properties response, media_url and media_preview_url
+     * @throws \Exception
+     */
     public function process()
     {
         if(!$this->media)
-            throw new \Exception('You mjust set the media path first using setMedia()');
+            throw new \Exception('You must set the media path first using setMedia()');
        $response = $this->generateAudioPreview() == 0 ? true : false;
-        return [
-            'response' => $response,
-            'media_url' => $this->media,
-            'media_preview_url' => $this->media_preview
-        ];
+        $r = new \stdClass();
+        $r->response = $response;
+        $r->media_url = $this->media;
+        $r->media_preview_url = $this->media_preview;
+        return $r;
     }
 
     private function generateAudioPreview(){
@@ -65,15 +72,17 @@ class AudioMediaProcessor implements MediaProcessor {
 
     private function getExecCommand() {
 
-        $ext = $this->filesystem->extension($this->media);
+        $ext = $this->storageService->extension($this->media);
         $output = str_replace($ext,"preview.$ext",$this->media);
 
-        if($this->filesystem->exists($output)){
-            $this->filesystem->delete($output);
+        if($this->storageService->exists($output)){
+            $this->storageService->delete($output);
         }
 
-        $this->media_preview = $output;
+        $this->media_preview = str_replace($ext,"preview.$ext",$this->relative_media);;
         $command = "ffmpeg -t 30 -i {$this->media}  -acodec copy {$output}";
-        return $command;//"ffmpeg -t 30 -acodec copy -i {$this->media} {$output}";
+        return $command;
     }
+
+
 }
