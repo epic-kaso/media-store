@@ -1,10 +1,10 @@
 <?php
 
-    use Laracasts\Validation\FormValidationException;
-    use MediaStore\Media\Commands\CreateMediaItemCommand;
-    use MediaStore\Repositories\Media\MediaRepository;
+	use Laracasts\Validation\FormValidationException;
+	use MediaStore\Media\Commands\CreateMediaItemCommand;
+	use MediaStore\Repositories\Media\MediaRepository;
 
-    class MediaItemsController extends \BaseController {
+	class MediaItemsController extends \BaseController {
         /**
          * @var MediaRepository
          */
@@ -67,7 +67,11 @@
 	 */
 	public function show($id)
 	{
-		//
+		$media = $this->mediaRepository->find($id);
+		if(!$media)
+			App::abort(404);
+
+		return View::make('media_items.show',compact('media'));
 	}
 
 	/**
@@ -79,7 +83,11 @@
 	 */
 	public function edit($id)
 	{
-		//
+		$media = $this->mediaRepository->find($id);
+		if(!$media)
+			App::abort(404);
+
+		return View::make('media_items.edit',compact('media'));
 	}
 
 	/**

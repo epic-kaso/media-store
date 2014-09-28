@@ -78,7 +78,8 @@ App::after(function($request, $response)
             && ! Entrust::hasRole(RoleRepository::MediaPartner)
             && ! Entrust::hasRole(RoleRepository::Owner) ) // Checks the current user
         {
-            App::abort(403);
+            //App::abort(403);
+            return Redirect::route('partner.login');
         }
         if(Entrust::hasRole('MediaPartner')){
             Context::set(Confide::user());
@@ -86,6 +87,7 @@ App::after(function($request, $response)
     });
 
     Route::when( 'media-items*','mediaitem_create');
+    Route::when('media-groups*','mediaitem_create');
 
 /*
 |--------------------------------------------------------------------------

@@ -87,8 +87,7 @@
      */
 
     Route::resource('media-items','MediaItemsController');
-
-
+    Route::resource('media-groups','MediaGroupController');
 
 Route::when('admin*','admin_role');
 

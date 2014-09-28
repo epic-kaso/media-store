@@ -6,7 +6,7 @@
         background-image: none;
     }
 </style>
-<div class="navbar navbar-default navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand">
@@ -18,7 +18,7 @@
                 <a href="#">Dashboard</a>
             </li>
             <li>
-                <a href="#">Media</a>
+                <a href="{{{ route('media-items.index') }}}">Media</a>
             </li>
             <li>
                 <a href="#">Business</a>
@@ -33,7 +33,7 @@
             @if(Auth::check())
                 <li id="fat-menu" class="dropdown">
                   <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                   <img src="img/cover.jpg"
+                   <img src="{{{ URL::asset('img/cover.jpg') }}}"
                    style="height: 40px;margin-top: -10px;margin-right: 5px;"
                    class="img-circle pull-left" />{{{ Confide::user()->username }}}<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
