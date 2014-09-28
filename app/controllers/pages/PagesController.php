@@ -43,7 +43,7 @@ class PagesController extends BaseController {
             $itm = new stdClass();
             $itm->title = $media->title;
             $itm->img_url = $media->album_art->url('medium');
-            $itm->mp3 = $media->preview_path;
+            $itm->mp3 = $media->file_path;
             $data[] = $itm;
 
         }
