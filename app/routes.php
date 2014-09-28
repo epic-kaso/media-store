@@ -90,4 +90,6 @@
     Route::resource('media-groups','MediaGroupController');
 
 Route::when('admin*','admin_role');
-
+Route::get('php_info',function(){
+    echo phpinfo();
+});
