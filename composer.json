@@ -14,7 +14,8 @@
         "zizaco/entrust": "~1.2",
         "codesleeve/laravel-stapler": "~1.0@dev",
         "graham-campbell/flysystem": "~1.0@dev",
-        "way/generators": "2.*"
+        "way/generators": "2.*",
+        "pda/pheanstalk": "2.0"
 	},	
     "require-dev": {
         "mockery/mockery": "0.9.*",
