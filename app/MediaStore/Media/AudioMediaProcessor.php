@@ -98,7 +98,12 @@ class AudioMediaProcessor implements MediaProcessor {
         $path = public_path($rel);
         //$output = str_replace($ext,"preview.$ext",$this->media);
         $this->media_preview = $rel;
-        \File::makeDirectory(public_path("previews/$context/"),null,true);
+
+        $dir_path = public_path("previews/$context/");
+        if(!file_exists($dir_path)){
+            \File::makeDirectory($dir_path,null,true);
+        }
+
         return $path;
     }
 
