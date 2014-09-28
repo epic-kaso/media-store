@@ -1,4 +1,4 @@
-<div class="col-sm-2 col-xs-5 media-item">
+<div class="col-sm-3 col-lg-2 col-xs-5 media-item">
      <img class="img-responsive" src="{{ $item->img_url or 'img/cover.jpg' }}" />
      <div class="meta-info">
          <ul>

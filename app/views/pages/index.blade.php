@@ -18,10 +18,10 @@
                 <div class="item active">
                   <div class="container">
                       <div class="carousel-caption">
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                              <img class="img-responsive" src="img/cover.jpg" />
                          </div>
-                         <div class="col-sm-7">
+                         <div class="col-xs-7">
                              <div class="meta-info">
                                     <h1>Title</h1>
                                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p></li>
@@ -36,10 +36,10 @@
                 <div class="item">
                   <div class="container">
                         <div class="carousel-caption">
-                          <div class="col-sm-4">
+                          <div class="col-xs-4">
                                <img class="img-responsive" src="img/cover.jpg" />
                            </div>
-                           <div class="col-sm-7">
+                           <div class="col-xs-7">
                                <div class="meta-info">
                                       <h1>Title</h1>
                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p></li>
@@ -54,10 +54,10 @@
                 <div class="item">
                  <div class="container">
                    <div class="carousel-caption">
-                     <div class="col-sm-4 ">
+                     <div class="col-xs-4 ">
                           <img class="img-responsive" src="img/cover.jpg" />
                       </div>
-                      <div class="col-sm-7">
+                      <div class="col-xs-7">
                           <div class="meta-info">
                                  <h1>Title</h1>
                                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p></li>
