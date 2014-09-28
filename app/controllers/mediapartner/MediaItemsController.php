@@ -2,10 +2,21 @@
 
     use Laracasts\Validation\FormValidationException;
     use MediaStore\Media\Commands\CreateMediaItemCommand;
+    use MediaStore\Repositories\Media\MediaRepository;
 
     class MediaItemsController extends \BaseController {
+        /**
+         * @var MediaRepository
+         */
+        private $mediaRepository;
 
-	/**
+        function __construct(MediaRepository $mediaRepository)
+        {
+            $this->mediaRepository = $mediaRepository;
+        }
+
+
+        /**
 	 * Display a listing of the resource.
 	 * GET /mediaitems
 	 *
@@ -13,7 +24,9 @@
 	 */
 	public function index()
 	{
+        $medias = $this->mediaRepository->all();
 
+        return  View::make('media_items.index',compact('medias'));
 	}
 
 	/**
