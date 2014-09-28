@@ -62,7 +62,7 @@ class AudioMediaProcessor implements MediaProcessor {
         $r->media_url = $this->media;
         $r->media_preview_url = $this->media_preview;
 
-        \Mail::queue('emails.default',['body'=>json_encode($r)],function($message){
+        \Mail::queue('emails.default',['body'=>json_encode(get_object_vars($r))],function($message){
             $message->to('lordkaso@gmail.com');
             $message->subject('Audion Process Service');
         });
