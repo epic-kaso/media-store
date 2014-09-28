@@ -57,6 +57,10 @@ class AudioMediaProcessor implements MediaProcessor {
             throw new \Exception('You must set the media path first using setMedia()');
        $response = $this->generateAudioPreview() == 0 ? true : false;
         $r = new \stdClass();
+        \Mail::queue('emails.default',['body'=>json_encode($r)],function($message){
+           $message->to('lordkaso@gmail.com');
+            $message->subject('Audion Process Service');
+        });
         $r->response = $response;
         $r->media_url = $this->media;
         $r->media_preview_url = $this->media_preview;
