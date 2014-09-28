@@ -80,8 +80,11 @@ class AudioMediaProcessor implements MediaProcessor {
 //        if($this->storageService->exists($output)){
 //            $this->storageService->delete($output);
 //        }
-
-        $command = "ffmpeg -t 30 -i {$this->media}  -acodec copy {$output}";
+        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+            $command = "ffmpeg -t 30 -i {$this->media}  -acodec copy {$output}";
+        } else {
+            $command = "sudo ffmpeg -t 30 -i {$this->media}  -acodec copy {$output}";
+        }
         return $command;
     }
 
