@@ -101,9 +101,8 @@ class AudioMediaProcessor implements MediaProcessor {
 
         $dir_path = public_path("previews/$context/");
         if(!file_exists($dir_path)){
-            \File::makeDirectory($dir_path,null,true);
+            mkdir($dir_path,0777,true);
         }
-
         return $path;
     }
 
