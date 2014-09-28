@@ -8,9 +8,11 @@
                  @if(isset($medias) && $medias->count() > 0)
                     @foreach($medias as $media)
                         <li class="list-group-item">
+                            <img src="{{{ $media->album_art->url('thumb') }}}" class="img-responsive pull-right" />
                             <h3>{{{ $media->title }}}</h3>
                             <p>{{{ $media->description }}}</p>
                             <p>{{{ $media->price }}}</p>
+
                         </li>
                     @endforeach
                     @else
