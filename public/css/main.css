@@ -199,7 +199,7 @@ img#jp_poster_0{
     padding-left: 10px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 568px) {
     .carousel {
         display: none;
     }

@@ -9,7 +9,7 @@
      </div>
      <div class="overlay">
         <div class="play-media"
-        ng-click="play('{{{ $item->mp3 }}}','{{{ $item->title }}}')">
+        ng-click="play('{{{ $item->mp3 }}}','{{{ $item->title }}}','{{{ $item->img_url }}}')">
             <span class="fa fa-play-circle"></span>
         </div>
         <div class="play-media"><span class="fa fa-download"></span></div>
