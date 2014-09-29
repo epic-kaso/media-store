@@ -84,9 +84,13 @@
          </div>
 
                <div class="row">
+                    @if(!empty($media))
                      @for($i = 0; $i < 5; $i++)
                       @include('pages.partials.media-item',['item'=>$media[rand(0,count($media) - 1)]])
                      @endfor
+                    @else
+                     <span>No data.</span>
+                    @endif
                </div>
 
                 <div class="row divider-row">
@@ -100,9 +104,13 @@
                </div>
 
                     <div class="row">
+                    @if(!empty($media))
                     @for($i = 0; $i < 8; $i++)
                          @include('pages.partials.media-item',['item'=>$media[rand(0,count($media) - 1)]])
                      @endfor
+                     @else
+                      <span>No data.</span>
+                     @endif
                     </div>
 
 
@@ -114,18 +122,25 @@
                      <div class="col-xs-5"><a href="#" class="btn btn-default btn-sm pull-right">SEE ALL</a></div>
                    </div>
                    <div class="row">
+                        @if(!empty($media))
                          @for($i = 0; $i < 7; $i++)
                             @include('pages.partials.media-item',['item'=>$media[rand(0,count($media) - 1)]])
                          @endfor
+                        @else
+                          <span>No data.</span>
+                         @endif
                    </div>
       </div>
       <div class="col-sm-2">
         <div class="small-divider"><span>Top 10</span></div>
         <div class="row">
-
+            @if(!empty($media))
             @for($i = 0; $i < 7; $i++)
                 @include('pages.partials.sidebar-media-item',['item'=>$media[rand(0,count($media) - 1)]])
             @endfor
+           @else
+             <span>No data.</span>
+            @endif
         </div>
       </div>
 
