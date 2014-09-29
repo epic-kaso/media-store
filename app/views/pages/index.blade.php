@@ -15,60 +15,14 @@
                 <li data-target="#myCarousel" data-slide-to="2"></li>
               </ol>
               <div class="carousel-inner">
-                <div class="item active">
-                  <div class="container">
-                      <div class="carousel-caption">
-                        <div class="col-xs-4">
-                             <img class="img-responsive" src="img/cover.jpg" />
-                         </div>
-                         <div class="col-xs-7">
-                             <div class="meta-info">
-                                    <h1>Title</h1>
-                                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p></li>
-                                     <p>Release date: xxx other info: </p>
-                                    <p><a class="btn btn-lg btn-primary" href="#"
-                                    role="button">Buy Now</a></p>
-                             </div>
-                         </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="container">
-                        <div class="carousel-caption">
-                          <div class="col-xs-4">
-                               <img class="img-responsive" src="img/cover.jpg" />
-                           </div>
-                           <div class="col-xs-7">
-                               <div class="meta-info">
-                                      <h1>Title</h1>
-                                       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p></li>
-                                       <p>Release date: xxx other info: </p>
-                                      <p><a class="btn btn-lg btn-primary" href="#"
-                                      role="button">Buy Now</a></p>
-                               </div>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                 <div class="container">
-                   <div class="carousel-caption">
-                     <div class="col-xs-4 ">
-                          <img class="img-responsive" src="img/cover.jpg" />
-                      </div>
-                      <div class="col-xs-7">
-                          <div class="meta-info">
-                                 <h1>Title</h1>
-                                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p></li>
-                                  <p>Release date: xxx other info: </p>
-                                 <p><a class="btn btn-lg btn-primary" href="#"
-                                 role="button">Buy Now</a></p>
-                          </div>
-                      </div>
-                   </div>
-               </div>
-                </div>
+                @if(!empty($media))
+                    @for($i = 0; $i < 3; $i++)
+                        @include('pages.partials.featured-item',
+                        ['item'=>$media[rand(0,count($media) - 1)],'class'=> $i == 1 ? 'active': ''])
+                     @endfor
+                @else
+                 <span>No data.</span>
+                @endif
               </div>
               <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
               <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>

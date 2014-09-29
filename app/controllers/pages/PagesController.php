@@ -44,6 +44,7 @@ class PagesController extends BaseController {
             $itm->img_url = $media->album_art->url('medium');
             $itm->mp3 = $media->preview_path;
             $itm->price = $media->price;
+            $itm->description = $media->description;
             $data[] = $itm;
         }
 
