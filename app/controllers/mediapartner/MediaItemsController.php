@@ -111,7 +111,13 @@
 	 */
 	public function destroy($id)
 	{
-		//
+		$object  = $this->mediaRepository->find($id);
+		if(!$object) {
+			return Redirect::back()->withError('Invalid Media Id');
+		}
+		$this->mediaRepository->delete($id);
+		Flash::message('Deleted successfully');
+		return Redirect::back()->withStatus('Deleted successfully');
 	}
 
 }

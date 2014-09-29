@@ -11,7 +11,6 @@ namespace MediaStore\QueueHandlers;
 
 use MediaStore\Media\AudioMediaProcessor;
 use MediaStore\Repositories\Media\MediaRepository;
-use Mockery\CountValidator\Exception;
 
 class AudioMediaCreator {
     protected $current_media;
@@ -37,31 +36,39 @@ class AudioMediaCreator {
      * @param $data array needs that 'media_id' be set;
      */
     public function fire($job,$data){
-        $media_item_id = $data['media_id'];
-        $media_file_path = $this->getMediaFilePath($media_item_id);
-        $this->createPreviewFile($media_file_path);
+        $path = $data['path'];
+        $media_id = $data['media_id'];
+
+        $audioProcessor = $this->audioMediaProcessor;
+        $repo  = $this->mediaRepository;
+
+        $audioProcessor->setMedia($path);
+        $response = $audioProcessor->process();
+        $repo->updateFileInfo($media_id,$path,$response->media_preview_url);
         $job->delete();
+        //$storageService = \App::make('MediaStore\Services\StorageService');
+        // $preview_path = $storageService->storePath($response->media_preview_url,$scope_id);
     }
 
-    public function getMediaFilePath($media_id){
-        $media = $this->mediaRepository->find($media_id);
-        $this->current_media = $media;
-        return $media->getFilePath();
-    }
-    public function createPreviewFile($media_path){
-        $this->audioMediaProcessor->setMedia($media_path);
-        $reply = $this->audioMediaProcessor->process();
-        if($reply->response)
-            $this->updateCurrentMediaWithPreviewPath($reply->media_preview_url);
-        throw new Exception('Error Occured with creating preview');
-    }
-
-    public function updateCurrentMediaWithPreviewPath($preview_path){
-        if(!$this->current_media)
-            throw new Exception('Media File Must be Defined before updating');
-        $response = $this->mediaRepository->update($this->current_media->id,[
-            $this->mediaRepository->previewPath => $preview_path
-        ]);
-        return $response;
-    }
+//    public function getMediaFilePath($media_id){
+//        $media = $this->mediaRepository->find($media_id);
+//        $this->current_media = $media;
+//        return $media->getFilePath();
+//    }
+//    public function createPreviewFile($media_path){
+//        $this->audioMediaProcessor->setMedia($media_path);
+//        $reply = $this->audioMediaProcessor->process();
+//        if($reply->response)
+//            $this->updateCurrentMediaWithPreviewPath($reply->media_preview_url);
+//        throw new Exception('Error Occured with creating preview');
+//    }
+//
+//    public function updateCurrentMediaWithPreviewPath($preview_path){
+//        if(!$this->current_media)
+//            throw new Exception('Media File Must be Defined before updating');
+//        $response = $this->mediaRepository->update($this->current_media->id,[
+//            $this->mediaRepository->previewPath => $preview_path
+//        ]);
+//        return $response;
+//    }
 } 

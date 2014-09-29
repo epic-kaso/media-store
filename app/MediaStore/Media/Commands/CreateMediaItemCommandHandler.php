@@ -57,17 +57,18 @@ class CreateMediaItemCommandHandler implements CommandHandler {
         $scope_id = $this->scope->id();
         $media_id= $media->id;
 
-        //\Queue::push(function($job) use($media_id,$path,$scope_id) {
-            $audioProcessor = \App::make('MediaStore\Media\AudioMediaProcessor');
-            $storageService = \App::make('MediaStore\Services\StorageService');
-            $repo  = \App::make('MediaStore\Repositories\Media\MediaRepository');
-
-            $audioProcessor->setMedia($path);
-            $response = $audioProcessor->process();
-           // $preview_path = $storageService->storePath($response->media_preview_url,$scope_id);
-            $repo->updateFileInfo($media_id,$path,$response->media_preview_url);
-            //$job->delete();
-        //});
+        \Queue::push('MediaStore\QueueHandlers\AudioMediaCreator',compact('media_id','path'));
+//        \Queue::push(function($job) use($media_id,$path,$scope_id) {
+//            $audioProcessor = \App::make('MediaStore\Media\AudioMediaProcessor');
+//            $storageService = \App::make('MediaStore\Services\StorageService');
+//            $repo  = \App::make('MediaStore\Repositories\Media\MediaRepository');
+//
+//            $audioProcessor->setMedia($path);
+//            $response = $audioProcessor->process();
+//           // $preview_path = $storageService->storePath($response->media_preview_url,$scope_id);
+//            $repo->updateFileInfo($media_id,$path,$response->media_preview_url);
+//            //$job->delete();
+//        });
     }
 
 

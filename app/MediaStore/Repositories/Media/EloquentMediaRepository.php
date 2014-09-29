@@ -117,7 +117,8 @@ class EloquentMediaRepository extends TenantRepository implements MediaRepositor
 
     public function delete($id)
     {
-        return $this->model->delete($id);
+        $m = $this->find($id);
+        return $m->delete();
     }
 
     public function read($id)

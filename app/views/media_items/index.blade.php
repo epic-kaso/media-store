@@ -11,6 +11,7 @@
             </div>
           </div>
           <div class="col-sm-9 col-sm-offset-3">
+          @include('partials._infos')
             <a href="{{{ route('media-items.create') }}}" class="btn btn-xs btn-primary pull-right">Add A media</a>
           </div>
         </div>
@@ -26,6 +27,10 @@
                                  <ul>
                                      <li><h4>{{ $media->title }}</h4></li>
                                      <li><p>Price:  N{{ $media->price }}</p></li>
+                                     <li>{{Form::open(['url'=>route('media-items.destroy',['id'=>$media->id]),'method'=>'DELETE'])}}
+                                            {{ Form::submit('Delete',['class'=>'btn btn-danger btn-xs']) }}
+                                         {{ Form::close() }}
+                                     </li>
                                  </ul>
                              </div>
                          </a>
