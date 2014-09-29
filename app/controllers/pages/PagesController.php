@@ -46,33 +46,6 @@ class PagesController extends BaseController {
             $data[] = $itm;
 
         }
-        $item = new stdClass();
-        $item->img_url = 'img/wizkid-ayo.jpg';
-        $item->mp3 = 'audio/demo1.mp3';
-        $item->title = Str::limit('Wizkid Ayo',28);
-        $data[] = $item;
-
-        $item = new stdClass();
-        $item->img_url = 'img/psquare.jpg';
-        $item->mp3 = 'audio/demo1.mp3';
-        $item->title = Str::limit('Psquare- Double Trouble',28);
-
-        $data[] = $item;
-
-        $item = new stdClass();
-        $item->img_url = 'img/twoface.jpg';
-        $item->mp3 = 'audio/demo2.mp3';
-        $item->title = Str::limit('2Face- Ascension',28);
-
-        $data[] = $item;
-
-        $item = new stdClass();
-        $item->img_url = 'img/cover.jpg';
-        $item->mp3 = 'audio/demo3.mp3';
-        $item->title = Str::limit('Brymo - Fe mi',28);
-
-        $data[] = $item;
-
         $post_url = $this->repo->getPostRouteFromContext($this->account_context->name());
 
         return View::make('pages.index',['media'=>$data,'post_url'=>$post_url]);
