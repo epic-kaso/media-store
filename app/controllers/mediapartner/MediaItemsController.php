@@ -54,7 +54,7 @@
             Flash::error($ex->getErrors());
                 return Redirect::back()->withInput()->withErrors($ex->getErrors());
         }
-        return $response->id;
+        return Redirect::route('media-items.show',['id',$response->id]);
 
 	}
 
