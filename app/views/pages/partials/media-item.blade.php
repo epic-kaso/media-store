@@ -1,10 +1,10 @@
 <div class="col-sm-3 col-lg-2 col-xs-5 media-item">
-     <img class="img-responsive" src="{{ $item->img_url or 'img/cover.jpg' }}" />
+     <img class="img-responsive" src="{{ $item->img_url or 'img/media_missing.png' }}" />
      <div class="meta-info">
          <ul>
-             <li><h4>{{ $item->title or 'Title' }}</h4></li>
-             <li><p>Release date: {{ $item->release_date or '' }}</p></li>
-             <li><p>Tracks: {{ $item->tracks_count or '' }}</p></li>
+             <li><h4>{{ $item->title or '' }}</h4></li>
+             <li><p>Release date: {{ $item->release_date or 'Latest' }}</p></li>
+             <li><p>N{{ $item->price or '' }}</p></li>
          </ul>
      </div>
      <div class="overlay">

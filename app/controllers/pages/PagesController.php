@@ -43,10 +43,12 @@ class PagesController extends BaseController {
             $itm->title = $media->title;
             $itm->img_url = $media->album_art->url('medium');
             $itm->mp3 = $media->preview_path;
+            $itm->price = $media->price;
             $data[] = $itm;
-
         }
-        $post_url = $this->repo->getPostRouteFromContext($this->account_context->name());
+
+        $post_url = $this->repo
+            ->getPostRouteFromContext($this->account_context->name());
 
         return View::make('pages.index',['media'=>$data,'post_url'=>$post_url]);
     }
