@@ -6,7 +6,7 @@
                     <span class="fa fa-pause pause"></span>
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-9">
                 <p>
                     <img ng-src="<% audio.poster %>" class="img-responsive" style="width: 50px;float: left"/>
                     <span ng-bind="audio.title"></span>
@@ -14,4 +14,4 @@
                 </p>
             </div>
         </div>
-    </div>
+</div>

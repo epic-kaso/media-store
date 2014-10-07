@@ -1,5 +1,5 @@
 @include('pages.partials.header')
-<div class="media-store-body" ng-controller="MediaController" >
+<div class="media-store-body" ng-controller="MediaController" style="padding-top: 50px;" >
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->

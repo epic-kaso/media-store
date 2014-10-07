@@ -52,7 +52,7 @@ App.factory('StripeService',function($http,$rootScope,StripKey,StripeBaseURL){
        buy: function(media){
            media_id = media.id;
            handler.open({
-               name: 'MediaItem',
+               name: media.title,
                description: 'buy '+media.title,
                amount: media.price,
                currency: 'ngn',
@@ -64,8 +64,8 @@ App.factory('StripeService',function($http,$rootScope,StripKey,StripeBaseURL){
 App.controller('MediaController',function($scope){
     $scope.audio = {};
     $scope.audio.url = '/audio/';
-    $scope.audio.title = "--";
-    $scope.audio.poster = "/img/cover.jpg";
+    $scope.audio.title = "No item selected";
+    $scope.audio.poster = "/img/media_missing.png";
 
     $scope.play = function(media_url,title,poster){
         $scope.audio.url = media_url;
