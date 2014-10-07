@@ -101,20 +101,19 @@
     /**
      * Buy Media Item
      */
-    Route::group(['prefix'=>'buy','before'=>'auth'],function(){
+    Route::group(['prefix'=>'buy'],function(){
         Route::post('item/{media_id}',['as'=>'charge_url',
             function(MediaItem $media_id){
 
-            $user = Auth::user();
-            Stripe::setApiKey($user->getStripeKey());
-
+            Stripe::setApiKey(User::getStripeKey());
             $token = Input::get('stripeToken');
             try {
                 $charge = Stripe_Charge::create(array(
                         "amount" => $media_id->price * 100, // amount in cents, again
                         "currency" => "ngn",
                         "card" => $token,
-                        "description" => $user->email)
+                        "description" => Input::get('stripeEmail')
+                    )
                 );
                 return $media_id->download();
             } catch(Stripe_CardError $e) {
