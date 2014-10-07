@@ -3,14 +3,17 @@ var App = angular.module('MediaStoreUser',[], function($interpolateProvider) {
     $interpolateProvider.endSymbol('%>');
 });
 
+App.constant('StripKey','pk_test_SZ0RjsZqGqvF3qKBOiWPF7Re');
+App.constant('StripeBaseURL','/buy/item/');
+
 App.run(function($rootScope) {
 
 });
 
-App.factory('StripeService',function($http,$rootScope){
+App.factory('StripeService',function($http,$rootScope,StripKey,StripeBaseURL){
     var media_id = null;
     var handler = StripeCheckout.configure({
-        key: 'pk_test_SZ0RjsZqGqvF3qKBOiWPF7Re',
+        key: StripKey,
         token: function(token) {
             $rootScope.$apply(function(){
                 processPayment(token);
@@ -19,7 +22,7 @@ App.factory('StripeService',function($http,$rootScope){
     });
 
     var processPayment = function(token){
-        var url = '/buy/item/'+ media_id;
+        var url = StripeBaseURL + media_id;
         var data = {
             stripeToken: token.id,
             stripeTokenType: 'card',

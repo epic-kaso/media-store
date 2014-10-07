@@ -102,14 +102,16 @@
      * Buy Media Item
      */
     Route::group(['prefix'=>'buy','before'=>'auth'],function(){
-        Route::post('item/{media_id}',['as'=>'charge_url',function(MediaItem $media_id){
+        Route::post('item/{media_id}',['as'=>'charge_url',
+            function(MediaItem $media_id){
+
             $user = Auth::user();
             Stripe::setApiKey($user->getStripeKey());
 
             $token = Input::get('stripeToken');
             try {
                 $charge = Stripe_Charge::create(array(
-                        "amount" => 10000, // amount in cents, again
+                        "amount" => $media_id->price * 100, // amount in cents, again
                         "currency" => "ngn",
                         "card" => $token,
                         "description" => $user->email)
