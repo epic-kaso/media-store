@@ -10,11 +10,11 @@
 
 
     use Auth;
-    use Couponcity\User\User;
     use Facebook\FacebookRequest;
     use Facebook\GraphUser;
     use Redirect;
     use Session;
+    use User;
 
     class FacebookLoginService
     {
