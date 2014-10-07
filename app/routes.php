@@ -107,9 +107,13 @@
 
             Stripe::setApiKey(User::getStripeKey());
             $token = Input::get('stripeToken');
+                $priz = $media_id->price;
+                if($priz < 100){
+                    $priz = 100;
+                }
             try {
                 $charge = Stripe_Charge::create(array(
-                        "amount" => $media_id->price * 100, // amount in cents, again
+                        "amount" => $priz * 100, // amount in cents, again
                         "currency" => "ngn",
                         "card" => $token,
                         "description" => Input::get('stripeEmail')
