@@ -65,3 +65,25 @@ App.directive('jplayer', function() {
         }
     };
 });
+
+
+
+
+/**
+ * Created by kaso on 10/7/2014.
+ */
+App.directive('stripe', function(StripeService) {
+        return {
+            restrict: 'EA',
+            scope: {
+                'media': '='
+            },
+            link: function (scope, element, attrs) {
+                element.bind('click', function(e) {
+                    StripeService.buy({id: attrs.id,title: attrs.title,price: attrs.price,poster: attrs.poster});
+                    e.preventDefault();
+                });
+            }
+        };
+    }
+);

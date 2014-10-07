@@ -26,7 +26,9 @@
             <li>
                 <a href="#">Banking</a>
             </li>
-
+            <li>
+                <a href="{{{ route('media-partner.settings.index') }}}">Settings</a>
+            </li>
         </ul>
 
          <ul class="nav navbar-nav navbar-right">

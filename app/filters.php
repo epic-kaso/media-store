@@ -86,8 +86,7 @@ App::after(function($request, $response)
         }
     });
 
-    Route::when( 'media-items*','mediaitem_create');
-    Route::when('media-groups*','mediaitem_create');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -175,3 +174,8 @@ Route::filter('csrf', function()
         $cxt = App::make('MediaStore\Context\SignUpContext\SignupContext');
         $cxt->set(RoleRepository::ADMIN);
     });
+
+
+    Route::when( 'media-items*','mediaitem_create');
+    Route::when('media-groups*','mediaitem_create');
+    Route::when('partner*','mediapartner_role');

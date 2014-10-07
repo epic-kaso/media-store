@@ -1,6 +1,6 @@
 <?php namespace MediaStore;
 use Illuminate\Support\ServiceProvider;
-use MediaStore\Repositories\Media\EloquentMediaRepository;
+use User;
 
 /**
  * Created by PhpStorm.
@@ -20,11 +20,16 @@ class MediaStoreServiceProvider extends ServiceProvider{
     public function register()
     {
         $this->mediaRepoBind();
+        $this->bootstrapStripe();
     }
 
     private function mediaRepoBind(){
         $this->app->bind('MediaStore\Repositories\Media\MediaRepository',function($app){
             return $app->make('MediaStore\Repositories\Media\EloquentMediaRepository');
         });
+    }
+
+    private function bootstrapStripe(){
+        User::setStripeKey('sk_test_ywP4xbbvVzAE6vP1fABrbGdf');
     }
 }

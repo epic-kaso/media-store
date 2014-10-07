@@ -12,10 +12,12 @@
         "laracasts/flash": "*",
         "zizaco/confide": "~4.0",
         "zizaco/entrust": "~1.2",
-        "codesleeve/laravel-stapler": "~1.0@dev",
+        "codesleeve/laravel-stapler": "dev-master",
         "graham-campbell/flysystem": "~1.0@dev",
         "way/generators": "2.*",
-        "pda/pheanstalk": "2.0"
+        "pda/pheanstalk": "2.0",
+		"laravel/cashier": "~2.0",
+		"facebook/php-sdk-v4": "4.0.*"
 	},	
     "require-dev": {
         "mockery/mockery": "0.9.*",

@@ -25,4 +25,9 @@
         {
             return $this->file_path;
         }
+
+        public function download(){
+            $filepath = $this->getFilePath();
+            return Response::download(storage_path("files/$filepath"),$this->title);
+        }
 }

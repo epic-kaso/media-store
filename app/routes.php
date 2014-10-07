@@ -2,6 +2,8 @@
 
 /**/
 
+    Route::model('media_id','MediaItem');
+
     Route::get('/',[
         'before'=>['consumer_signup'],
         'as'=>'home',
@@ -88,8 +90,33 @@
 
     Route::resource('media-items','MediaItemsController');
     Route::resource('media-groups','MediaGroupController');
+    Route::resource('media-partner/settings', 'MediapartnerSettingsController');
 
-Route::when('admin*','admin_role');
-Route::get('php_info',function(){
-    echo phpinfo();
-});
+    Route::when('admin*','admin_role');
+    Route::when('media-partner*','mediapartner_role');
+    Route::get('php_info',function(){
+        echo phpinfo();
+    });
+
+    /**
+     * Buy Media Item
+     */
+    Route::group(['prefix'=>'buy','before'=>'auth'],function(){
+        Route::post('item/{media_id}',['as'=>'charge_url',function(MediaItem $media_id){
+            $user = Auth::user();
+            Stripe::setApiKey($user->getStripeKey());
+
+            $token = Input::get('stripeToken');
+            try {
+                $charge = Stripe_Charge::create(array(
+                        "amount" => 10000, // amount in cents, again
+                        "currency" => "ngn",
+                        "card" => $token,
+                        "description" => $user->email)
+                );
+                return $media_id->download();
+            } catch(Stripe_CardError $e) {
+                echo $e->getMessage();
+            }
+        }]);
+    });

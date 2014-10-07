@@ -40,6 +40,7 @@ class PagesController extends BaseController {
 
         foreach($medias as $media){
             $itm = new stdClass();
+            $itm->id = $media->id;
             $itm->title = $media->title;
             $itm->img_url = $media->album_art->url('medium');
             $itm->mp3 = $media->preview_path;

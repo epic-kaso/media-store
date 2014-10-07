@@ -130,7 +130,8 @@ return array(
         'MediaStore\Context\ContextServiceProvider',
         'MediaStore\MediaStoreServiceProvider',
         'Codesleeve\LaravelStapler\LaravelStaplerServiceProvider',
-        'GrahamCampbell\Flysystem\FlysystemServiceProvider'
+        'GrahamCampbell\Flysystem\FlysystemServiceProvider',
+		'Laravel\Cashier\CashierServiceProvider'
 	),
 
 	/*
@@ -201,7 +202,8 @@ return array(
         'Confide'           => 'Zizaco\Confide\Facade',
         'Entrust'           => 'Zizaco\Entrust\EntrustFacade',
         'Context'           => 'MediaStore\Context\ContextFacade',
-        'Flysystem'         => 'GrahamCampbell\Flysystem\Facades\Flysystem'
+        'Flysystem'         => 'GrahamCampbell\Flysystem\Facades\Flysystem',
+
 	),
 
 );
