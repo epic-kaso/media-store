@@ -3,6 +3,5 @@ composer.phar
 .env.*
 .DS_Store
 Thumbs.db
-
 tests/_output/*
 public/system
