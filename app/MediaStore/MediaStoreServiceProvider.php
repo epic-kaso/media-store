@@ -30,6 +30,10 @@ class MediaStoreServiceProvider extends ServiceProvider{
     }
 
     private function bootstrapStripe(){
-        User::setStripeKey('sk_test_ywP4xbbvVzAE6vP1fABrbGdf');
+        if(\Config::getEnvironment() == 'production'){
+            User::setStripeKey('sk_live_OsGUW43gxYVn4IyxUjmDnaX7');
+        }else{
+            User::setStripeKey('sk_test_ywP4xbbvVzAE6vP1fABrbGdf');
+        }
     }
 }

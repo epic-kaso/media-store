@@ -3,8 +3,8 @@ var App = angular.module('MediaStoreUser',[], function($interpolateProvider) {
     $interpolateProvider.endSymbol('%>');
 });
 
-App.constant('StripKey','pk_test_SZ0RjsZqGqvF3qKBOiWPF7Re');
-App.constant('StripeBaseURL','/buy/item/');
+App.constant('StripKey',window.mediastore.stripe_key);
+App.constant('StripeBaseURL',window.mediastore.stripe_base_url);
 
 App.run(function($rootScope) {
 
