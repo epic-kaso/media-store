@@ -123,7 +123,10 @@ Route::get('/units/messages/new',function(){
 });
 
 Route::post('/units/messages/new',function(){
-
+    return Response::json([
+        "messageType" => 0,
+        "message"     => "Checking In"
+    ]);
 });
 
 Route::any('/units/login',function(){
