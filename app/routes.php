@@ -112,18 +112,14 @@
 
 Route::get('/units/messages/new',function(){
     $token = Request::header("Authorization");
-    $storedToken = Session::get("token");
-    if($token === $storedToken) {
-        return Response::json([[
-            "messageType" => 0,
-            "message"     => "Checking In"
-        ], [
-            "messageType" => 1,
-            "message"     => "Testing Out"
-        ]]);
-    }else{
-        return Response::json(['error'],403);
-    }
+
+    return Response::json([[
+        "messageType" => 0,
+        "message"     => "Checking In"
+    ], [
+        "messageType" => 1,
+        "message"     => "Testing Out"
+    ]]);
 });
 
 Route::post('/units/messages/new',function(){
