@@ -105,12 +105,16 @@
         Route::post('item/{media_id}',
             ['as'=>'charge_url',
              'uses'=>'MediaPurchaseController@postBuy'
-            ]);
+            ]
+        );
     });
 
 
 Route::get('/units/messages/new',function(){
-
+    return json_encode([
+        "messageType" => 0,
+        "message"	=> "Checking In"
+    ]);
 });
 
 Route::post('/units/messages/new',function(){
