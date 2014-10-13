@@ -111,13 +111,19 @@
 
 
 Route::get('/units/messages/new',function(){
-    return json_encode([[
-        "messageType" => 0,
-        "message"	=> "Checking In"
-    ],[
-        "messageType" => 1,
-        "message"	=> "Testing Out"
-    ]]);
+    $token = Request::header("Authorization");
+    $storedToken = Session::get("token");
+    if($token === $storedToken) {
+        return Response::json([[
+            "messageType" => 0,
+            "message"     => "Checking In"
+        ], [
+            "messageType" => 1,
+            "message"     => "Testing Out"
+        ]]);
+    }else{
+        return Response::json(['error'],403);
+    }
 });
 
 Route::post('/units/messages/new',function(){
@@ -125,5 +131,7 @@ Route::post('/units/messages/new',function(){
 });
 
 Route::any('/units/login',function(){
-    return "xscmnldpmjenksp";
+    $token =  Str::quickRandom();
+    Session::put("token",$token);
+    return $token;
 });
