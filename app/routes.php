@@ -111,10 +111,13 @@
 
 
 Route::get('/units/messages/new',function(){
-    return json_encode([
+    return json_encode([[
         "messageType" => 0,
         "message"	=> "Checking In"
-    ]);
+    ],[
+        "messageType" => 1,
+        "message"	=> "Testing Out"
+    ]]);
 });
 
 Route::post('/units/messages/new',function(){
