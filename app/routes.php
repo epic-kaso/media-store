@@ -107,3 +107,16 @@
              'uses'=>'MediaPurchaseController@postBuy'
             ]);
     });
+
+
+Route::get('/units/messages/new',function(){
+
+});
+
+Route::post('/units/messages/new',function(){
+
+});
+
+Route::any('/units/login',function(){
+    return "xscmnldpmjenksp";
+});
