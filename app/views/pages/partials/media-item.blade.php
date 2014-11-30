@@ -23,10 +23,8 @@
                 <span class="fa fa-download"></span> Buy ₦{{ $item->price or '' }}
             </a>
 
-            <a href="{{ URL::route('media-item',['slug'=>$item->slug]) }}" style="
-                                                                               font-size: 0.4em;
-                                                                               text-decoration: none;
-                                                                           ">view details &gt;&gt;</a>
+            <a href="{{ URL::route('media-item',['slug'=>$item->slug]) }}"
+             style="font-size: 0.4em;text-decoration: none;">view details &gt;&gt;</a>
         </div>
      </div>
  </div>

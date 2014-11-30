@@ -4,7 +4,9 @@
         <div class="row">
           <div class="tips-side-bar">
              <div class="list-group">
-              <a href="{{{ route('media-items.show') }}}" class="list-group-item">Show</a>
+                <a href="{{{ route('media-items.show') }}}" class="list-group-item">Personalization</a>
+                <a href="#" class="list-group-item">Business</a>
+                <a href="#" class="list-group-item">Banking</a>
              </div>
           </div>
           <div class="col-sm-6 col-sm-offset-3">

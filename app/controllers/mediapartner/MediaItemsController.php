@@ -52,9 +52,9 @@
             $response = $this->execute(CreateMediaItemCommand::class);
         }catch (FormValidationException $ex){
             Flash::error($ex->getErrors());
-                return Redirect::back()->withInput()->withErrors($ex->getErrors());
+            return Redirect::back()->withInput()->withErrors($ex->getErrors());
         }
-        return Redirect::route('media-items.show',['id',$response->id]);
+        return Redirect::to(route('media-items.show',[$response->id]));
 
 	}
 

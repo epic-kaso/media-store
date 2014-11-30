@@ -162,6 +162,11 @@
                     'uses' => 'UsersController@doResetPassword'
                 ]
             );
+            Route::get('tenant',[
+               'uses' => function(){
+                   return Redirect::route('media-items.create');
+               }
+            ]);
         }
     );
 

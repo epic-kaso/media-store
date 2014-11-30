@@ -16,7 +16,7 @@ class UserRepository
     protected $dashboard_map = [
         'Admin' => 'admin-dashboard',
         'Consumer'=>'home',
-        'MediaPartner'=>'mediapartner-dashboard',
+        'MediaPartner'=>'media-items.index',
         'Owner'=>'owner-dashboard'
     ];
 

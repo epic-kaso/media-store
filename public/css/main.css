@@ -7,14 +7,14 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background-color: #f2f2f2;
-    background-image: url('/img/prism.jpg');
+    /* background-color: #f2f2f2; */
+    /* background-image: url('/img/prism.jpg'); */
     font-weight: 300;
     position: relative;
 }
 .media-store-body > .container {
-    background-color: #ffffff;
-    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    /* background-color: #ffffff; */
+    /* box-shadow: 0 0 5px rgba(0,0,0,.5); */
 }
 
 .media-item {
@@ -332,18 +332,20 @@ div.counter-box span.count{
 .price-box{
     border: #f2f2f2 solid thin;
     border-radius: 5px;
-    padding: 2px;
+    padding: 5px;
     vertical-align: middle;
     text-align: center;
-    font-weight: 700;
-    background-color: #0f75bc;
-    color: #ffffff;
+    font-weight: 400;
+    /* background-color: #0f75bc; */
+    color: grey;
+    font-size: 1.4em;
 }
 
 .img-album-art {
     position: absolute;
     left: 10px;
     bottom: -50px;
+    max-height: 100px;
 }
 
 .img-landing-page{
@@ -372,4 +374,14 @@ div.counter-box span.count{
 .img-landing-page span.label {
     font-size: 1.8em;
     left: 400px;
+}
+
+
+.navbar-inverse .navbar-nav>li>a {
+    font-size: 1.2em;
+    color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #e8e8e8;
 }

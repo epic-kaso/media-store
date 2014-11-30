@@ -2,29 +2,28 @@
 @section('main-content')
     <div class="container" style="padding-top: 60px">
         <div class="row">
-          <div class="tips-side-bar">
-              <h3>Creating Media Guide Lines.</h3>
-              <hr/>
-              <br/>
-              <strong>Album Art</strong>
-              <ul>
-                <li>For the media Album Art make sure you use a square picture. i.e Picture with the height and with equal e.g 500x500 pixels </li>
-                <li>For best quality use a picture that has a minimum resolution of 500x500 pixels as in example above</li>
-              </ul>
-               <br/><br/>
-              <strong>Media File</strong>
-              <ul>
-                <li>For the media file, make sure it is of type <strong>MP3, M4A or MP4</strong>. these are the only supported types.</li>
-                <li>The file size must not be above <strong>20 Megabytes</strong></li>
-              </ul>
-          </div>
-          <div class="col-sm-6 col-sm-offset-3">
-            <a href="{{{ route('media-items.index') }}}" class="btn btn-xs btn-primary pull-right">View All</a>
+          {{--<div class="tips-side-bar">--}}
+              {{--<h3>Creating Media Guide Lines.</h3>--}}
+              {{--<hr/>--}}
+              {{--<br/>--}}
+              {{--<strong>Album Art</strong>--}}
+              {{--<ul>--}}
+                {{--<li>For the media Album Art make sure you use a square picture. i.e Picture with the height and with equal e.g 500x500 pixels </li>--}}
+                {{--<li>For best quality use a picture that has a minimum resolution of 500x500 pixels as in example above</li>--}}
+              {{--</ul>--}}
+               {{--<br/><br/>--}}
+              {{--<strong>Media File</strong>--}}
+              {{--<ul>--}}
+                {{--<li>For the media file, make sure it is of type <strong>MP3, M4A or MP4</strong>. these are the only supported types.</li>--}}
+                {{--<li>The file size must not be above <strong>20 Megabytes</strong></li>--}}
+              {{--</ul>--}}
+          {{--</div>--}}
+          <div class="col-sm-8 col-sm-offset-2">
+            <a href="{{{ route('media-items.index') }}}"><< All Media</a>
           </div>
         </div>
         <div class="row">
-
-            <div class="col-sm-6 col-sm-offset-3">
+            <div class="col-sm-8 col-sm-offset-2">
              <h2>Create media</h2>
                  {{ Form::open(['url'=>route('media-items.store'),'files'=>true])  }}
                  <fieldset>
@@ -85,7 +84,7 @@
                         @endif
 
                         <div class="form-actions form-group">
-                          <button type="submit" class="btn btn-primary">{{{ Lang::get('confide::confide.signup.submit') }}}</button>
+                          <button type="submit" class="btn btn-primary">Upload</button>
                         </div>
 
                     </fieldset>
