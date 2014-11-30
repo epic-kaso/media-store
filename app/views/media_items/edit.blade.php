@@ -28,7 +28,7 @@
 
             <div class="col-sm-6 col-sm-offset-3">
              <h2>Edit media</h2>
-                 {{ Form::open(['url'=>route('media-items.update',['id'=>$media->id]),'files'=>true])  }}
+                 {{ Form::open(['url'=>route('media-items.update',['id'=>$media->id]),'method'=>'PUT'])  }}
                  <fieldset>
                         @if (Session::get('error'))
                             <div class="alert alert-error alert-danger">
@@ -41,26 +41,6 @@
                         @if (Session::get('notice'))
                             <div class="alert alert-info">{{ Session::get('notice') }}</div>
                         @endif
-
-                        <!-- album_art text field -->
-                        <div class="form-group">
-                                {{ Form::label('album_art','Album_art: ') }}
-                                {{ Form::file('album_art',
-                                ['class'=>'form-control file',
-                                 'data-preview-file-type'=>'image',
-                                 'data-allowed-preview-types'=>'image',
-                                  'data-show-upload'=>'false',
-                                  'data-browse-icon'=>'<i class="fa fa-file-image-o"></i>']) }}
-                        </div>
-
-                        <div class="form-group">
-                                {{ Form::label('file','Media File ') }}
-                                {{ Form::file('file',
-                                ['class'=>'form-control file',
-                                 'data-allowed-preview-types'=>'[audio,video]',
-                                  'data-show-upload'=>'false',
-                                  'data-browse-icon'=>'<i class="fa fa-file-audio-o"></i>']) }}
-                        </div>
                         <!-- title text field -->
                         <div class="form-group">
                                 {{ Form::label('title','Title: ') }}

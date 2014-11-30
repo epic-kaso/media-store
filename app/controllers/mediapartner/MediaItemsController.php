@@ -71,7 +71,8 @@
 		if(!$media)
 			App::abort(404);
 
-		return View::make('media_items.show',compact('media'));
+		return View::make('media_items.show',compact('media'))
+			->with('message',Session::get('message'));
 	}
 
 	/**
@@ -99,7 +100,33 @@
 	 */
 	public function update($id)
 	{
-		//
+		$media = $this->mediaRepository->find($id);
+		if(!$media)
+			App::abort(404);
+
+		$rules = [
+			'title' => 'required',
+			'description' => '',
+			'price' => 'numeric',
+			'group_id' => 'integer'
+		];
+
+		$validation = Validator::make(Input::all(),$rules);
+
+		if($validation->fails())
+			return Redirect::back()->withInput()->withErrors($validation);
+
+		if(!$media->slug){
+			$media->slug = Str::slug(Input::get('title')).'-'.$media->id;
+		}
+
+		$media->title = Input::get('title');
+		$media->description = Input::get('description');
+		$media->price = Input::get('price');
+		$media->group_id = Input::get('group_id');
+		$media->save();
+
+		return Redirect::action('MediaItemsController@show',['id'=>$id])->withMessage('Successfully updated');
 	}
 
 	/**

@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c7e8d64-2516-4358-bb7b-182fed78f367" name="Default" comment="Media Upload Queue Service">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/migrations/2014_11_29_193909_add_slug_column_to_media_items.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/pages/MediaPageController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/media-item.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/MediaStore/Repositories/Media/EloquentMediaRepository.php" afterPath="$PROJECT_DIR$/app/MediaStore/Repositories/Media/EloquentMediaRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/MediaStore/Repositories/Media/MediaRepository.php" afterPath="$PROJECT_DIR$/app/MediaStore/Repositories/Media/MediaRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pages/PagesController.php" afterPath="$PROJECT_DIR$/app/controllers/pages/PagesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filters.php" afterPath="$PROJECT_DIR$/app/filters.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/partials/header.blade.php" afterPath="$PROJECT_DIR$/app/views/pages/partials/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/local/mail.php" afterPath="$PROJECT_DIR$/app/config/local/mail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/mediapartner/MediaItemsController.php" afterPath="$PROJECT_DIR$/app/controllers/mediapartner/MediaItemsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/media_items/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/media_items/edit.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/partials/media-item.blade.php" afterPath="$PROJECT_DIR$/app/views/pages/partials/media-item.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -39,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="media-item.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/partials/media-item.blade.php">
+      <file leaf-file-name="MediaItemsController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/mediapartner/MediaItemsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8303426" vertical-offset="141" max-vertical-offset="858">
-              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            <state vertical-scroll-proportion="-0.019607844" vertical-offset="3132" max-vertical-offset="3978">
+              <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -193,55 +185,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media-store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media-store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media-store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media-store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="media_items" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,7 +225,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="mediapartner" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -814,7 +758,13 @@
       <option name="project" value="LOCAL" />
       <updated>1413242190720</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Media Upload Queue Service">
+      <created>1417315812999</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1417315812999</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -839,16 +789,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2647528" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3207262" sideWeight="0.50239235" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3207262" sideWeight="0.50159746" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3207262" sideWeight="0.49760765" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3207262" sideWeight="0.4968051" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -857,7 +808,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -898,13 +848,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/mediapartners_settings/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7504" vertical-offset="1247" max-vertical-offset="1872">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/MediapartnerSetting.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7742947" vertical-offset="0" max-vertical-offset="702">
@@ -1370,36 +1313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/mediapartner/MediaItemsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5513866" vertical-offset="936" max-vertical-offset="3276">
-          <caret line="51" column="61" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="61" />
-          <folding>
-            <marker date="1411956230043" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder=" @var MediaRepository ..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder=" Display a listing of the resource. ..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder=" Show the form for creating a new resource. ..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder=" Store a newly created resource in storage. ..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder=" Display the specified resource. ..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder=" Show the form for editing the specified resource. ..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder=" Update the specified resource in storage. ..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder=" Remove the specified resource from storage. ..." />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411956230043" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/MediaStore/Media/Commands/CreateMediaItemCommandHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29690048" vertical-offset="936" max-vertical-offset="1950">
@@ -1580,21 +1493,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.83067095" vertical-offset="936" max-vertical-offset="2080">
           <caret line="58" column="27" selection-start-line="50" selection-start-column="12" selection-end-line="58" selection-end-column="27" />
-          <folding>
-            <marker date="1417291303697" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder="@class PagesController ..." />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder=" @var PaymentProcessingService ..." />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417291303697" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1616,105 +1515,6 @@
             <marker date="1417295485953" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1417295485953" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1417295485953" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6786297" vertical-offset="0" max-vertical-offset="7306">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder=" Consumer Account Routes ..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder=" Media Partners Account Route ..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder=" Media Partner Dashboard Routes ..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder=" Admin Dashboard Routes ..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder=" Owner Dashboard Routes ..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder=" Media Item Resource ..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder=" Buy Media Item ..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417296729545" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1781,10 +1581,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8071895" vertical-offset="0" max-vertical-offset="7306">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/media-item.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0179446" vertical-offset="0" max-vertical-offset="1612">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.59477127" vertical-offset="0" max-vertical-offset="1612">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
             <marker date="1417296421555" expanded="false" signature="-1:-1" placeholder="..." />
             <marker date="1417296421555" expanded="true" signature="-1:-1" placeholder="..." />
@@ -1810,8 +1618,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/partials/media-item.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8303426" vertical-offset="141" max-vertical-offset="858">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.5522876" vertical-offset="0" max-vertical-offset="858">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding>
+            <marker date="1417316142221" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316142221" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316142221" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316142221" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316142221" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316142221" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316142221" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316142221" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/media_items/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50980395" vertical-offset="702" max-vertical-offset="2106">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417316777565" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/mediapartner/MediaItemsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.019607844" vertical-offset="3132" max-vertical-offset="3978">
+          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
           <folding />
         </state>
       </provider>

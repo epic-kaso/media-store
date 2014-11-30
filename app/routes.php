@@ -14,7 +14,7 @@
     );
 
     Route::get(
-        '/{slug}',
+        '/media/{slug}',
         [
             'before' => ['consumer_signup'],
             'as'     => 'media-item',
