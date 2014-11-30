@@ -20,4 +20,6 @@ interface MediaRepository extends CrudRepository {
     public function getManyBy($key, $value, array $with = array());
     public function createFromMediaCommand($command,$file_path = null,$file_preview_path = null);
     public function updateFileInfo($media_id,$file_path = null,$file_preview_path = null);
+
+    public function getBySlug($slug);
 } 

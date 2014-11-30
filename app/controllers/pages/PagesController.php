@@ -55,6 +55,7 @@ class PagesController extends BaseController {
             $itm->mp3 = $media->preview_path;
             $itm->price = $media->price;
             $itm->description = $media->description;
+            $itm->slug = $media->slug;
             $data[] = $itm;
         }
 

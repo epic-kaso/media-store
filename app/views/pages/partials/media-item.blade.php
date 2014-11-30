@@ -8,6 +8,7 @@
          </ul>
      </div>
      <div class="overlay">
+        <a href="{{ URL::to('/'.$item->slug) }}">
         <div class="play-media"
         ng-click="play('{{{ $item->mp3 }}}','{{{ $item->title }}}','{{{ $item->img_url }}}')">
             <a href="#" class="btn btn-warning"><span class="fa fa-play-circle"></span> Play preview</a>
@@ -22,5 +23,6 @@
                 <span class="fa fa-download"></span> Buy ₦{{ $item->price or '' }}
             </a>
         </div>
+        </a>
      </div>
  </div>

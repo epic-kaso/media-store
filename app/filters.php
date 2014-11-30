@@ -161,7 +161,7 @@ Route::filter('csrf', function()
 
 
     Route::filter('partner_signup',function(){
-       $cxt = App::make('MediaStore\Context\SignUpContext\SignupContext');
+        $cxt = App::make('MediaStore\Context\SignUpContext\SignupContext');
         $cxt->set(RoleRepository::MediaPartner);
     });
 

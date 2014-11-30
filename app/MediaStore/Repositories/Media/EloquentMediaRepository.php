@@ -138,6 +138,8 @@ class EloquentMediaRepository extends TenantRepository implements MediaRepositor
             'preview_path'=>$file_preview_path
         ]);
 
+        $this->createSlug($command, $media);
+
         return $media;
     }
 
@@ -150,6 +152,23 @@ class EloquentMediaRepository extends TenantRepository implements MediaRepositor
             $media->preview_path = $file_preview_path;
         }
 
+        $media->save();
+    }
+
+    public function getBySlug($slug){
+        $mediaItem = $this->model
+                        ->where('slug',$slug)
+                        ->first();
+        return $mediaItem;
+    }
+
+    /**
+     * @param $command
+     * @param $media
+     */
+    protected function createSlug($command, $media)
+    {
+        $media->slug = \Str::slug($command->title) . '-' . $media->id;
         $media->save();
     }
 }
