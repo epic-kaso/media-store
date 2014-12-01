@@ -7,7 +7,7 @@
         @include('pages.partials.page-header')
         <div class="row">
             {{--{{ (string)$mediaItem }}--}}
-            <div class="col-sm-8 col-sm-offset-2">
+            <div class="col-sm-12">
                 <div class="img-landing-page" style="background-image: url('{{ $mediaItem->cover_img }}')">
                     <img class="img-responsive img-thumbnail img-album-art" src="{{ $mediaItem->img_url }}" />
                     <span>{{ strtolower($mediaItem->title) }}</span>
